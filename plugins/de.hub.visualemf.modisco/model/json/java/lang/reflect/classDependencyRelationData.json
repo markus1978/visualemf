@@ -1,0 +1,17 @@
+[
+	{
+		"name" : "GenericDeclaration",
+		"id" : "java.lang.reflect.GenericDeclaration",
+		"links" : ["java.lang.reflect.AnnotatedElement"]
+	}, 
+	{
+		"name" : "AnnotatedElement",
+		"id" : "java.lang.reflect.AnnotatedElement",
+		"links" : []
+	}, 
+	{
+		"name" : "Type",
+		"id" : "java.lang.reflect.Type",
+		"links" : []
+	}
+]

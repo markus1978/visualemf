@@ -1,0 +1,7 @@
+[
+	{
+		"name" : "XMIResourceFactoryImpl",
+		"id" : "org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl"]
+	}
+]

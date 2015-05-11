@@ -1,0 +1,536 @@
+[
+	{
+		
+		"name" : "Package",
+		"children" : [
+			{
+				
+				"name" : "InterfaceDeclaration"
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "InterfaceDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "InterfaceDeclaration"
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeAccess"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}
+		]
+	}
+]

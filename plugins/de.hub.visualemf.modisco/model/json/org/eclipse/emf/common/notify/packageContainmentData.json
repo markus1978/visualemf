@@ -1,0 +1,122 @@
+[
+	{
+		
+		"name" : "Package",
+		"children" : [
+			{
+				
+				"name" : "InterfaceDeclaration"
+			}, 
+			{
+				
+				"name" : "InterfaceDeclaration"
+			}, 
+			{
+				
+				"name" : "InterfaceDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "VariableDeclarationFragment"
+							}
+						]
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "VariableDeclarationFragment"
+							}
+						]
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "VariableDeclarationFragment"
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "VariableDeclarationFragment"
+							}
+						]
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "VariableDeclarationFragment"
+							}
+						]
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "VariableDeclarationFragment"
+							}
+						]
+					}
+				]
+			}, 
+			{
+				
+				"name" : "Package"
+			}
+		]
+	}
+]

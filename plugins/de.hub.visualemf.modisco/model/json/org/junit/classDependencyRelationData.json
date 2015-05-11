@@ -1,0 +1,7 @@
+[
+	{
+		"name" : "Assert",
+		"id" : "org.junit.Assert",
+		"links" : ["java.lang.Object"]
+	}
+]

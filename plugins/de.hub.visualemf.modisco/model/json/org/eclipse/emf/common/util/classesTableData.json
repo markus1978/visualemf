@@ -1,0 +1,20 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "URI",
+			"id" : "org.eclipse.emf.common.util.URI",
+			"values"" : [8979, 0, 0, 1, 6, 0, 12]
+		},
+		{
+			"name" : "EList",
+			"id" : "org.eclipse.emf.common.util.EList",
+			"values"" : [8987, 3, 0, 2, 2, 27, 12]
+		},
+		{
+			"name" : "TreeIterator",
+			"id" : "org.eclipse.emf.common.util.TreeIterator",
+			"values"" : [8987, 1, 0, 1, 0, 2, 2]
+		}
+	]
+}

@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: de.hub.visualemf.modisco;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.hub.visualemf.modiscodata,
+ de.hub.visualemf.modiscodata.impl,
+ de.hub.visualemf.modiscodata.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ de.hub.visualemf;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.gmt.modisco.java;bundle-version="0.12.1",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.10.2",
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro
+Bundle-ActivationPolicy: lazy
+

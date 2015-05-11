@@ -1,0 +1,47 @@
+[
+	{
+		"name" : "Registry",
+		"id" : "org.eclipse.emf.ecore.resource.Resource.Factory.Registry",
+		"links" : ["org.eclipse.emf.ecore.resource.Resource.Factory"]
+	}, 
+	{
+		"name" : "Factory",
+		"id" : "org.eclipse.emf.ecore.resource.Resource.Factory",
+		"links" : ["org.eclipse.emf.ecore.resource.Resource"]
+	}, 
+	{
+		"name" : "Internal",
+		"id" : "org.eclipse.emf.ecore.resource.Resource.Internal",
+		"links" : ["org.eclipse.emf.ecore.resource.Resource"]
+	}, 
+	{
+		"name" : "Resource",
+		"id" : "org.eclipse.emf.ecore.resource.Resource",
+		"links" : ["java.util.Map", "org.eclipse.emf.common.notify.Notifier", "org.eclipse.emf.ecore.EObject"]
+	}, 
+	{
+		"name" : "URIHandler",
+		"id" : "org.eclipse.emf.ecore.resource.URIHandler",
+		"links" : []
+	}, 
+	{
+		"name" : "Saveable",
+		"id" : "org.eclipse.emf.ecore.resource.URIConverter.Saveable",
+		"links" : ["org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.ecore.resource.URIConverter"]
+	}, 
+	{
+		"name" : "Loadable",
+		"id" : "org.eclipse.emf.ecore.resource.URIConverter.Loadable",
+		"links" : ["org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.ecore.resource.URIConverter"]
+	}, 
+	{
+		"name" : "URIConverter",
+		"id" : "org.eclipse.emf.ecore.resource.URIConverter",
+		"links" : []
+	}, 
+	{
+		"name" : "ResourceSet",
+		"id" : "org.eclipse.emf.ecore.resource.ResourceSet",
+		"links" : ["org.eclipse.emf.common.notify.Notifier"]
+	}
+]

@@ -1,0 +1,25 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "BinaryEncoder",
+			"id" : "org.apache.commons.codec.BinaryEncoder",
+			"values"" : [8991, 1, 0, 1, 0, 0, 1]
+		},
+		{
+			"name" : "Encoder",
+			"id" : "org.apache.commons.codec.Encoder",
+			"values"" : [8991, 0, 0, 0, 0, 0, 0]
+		},
+		{
+			"name" : "BinaryDecoder",
+			"id" : "org.apache.commons.codec.BinaryDecoder",
+			"values"" : [8991, 1, 0, 1, 0, 0, 1]
+		},
+		{
+			"name" : "Decoder",
+			"id" : "org.apache.commons.codec.Decoder",
+			"values"" : [8991, 0, 0, 0, 0, 0, 0]
+		}
+	]
+}

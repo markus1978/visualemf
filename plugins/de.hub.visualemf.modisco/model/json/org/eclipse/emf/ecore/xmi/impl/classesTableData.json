@@ -1,0 +1,10 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "XMIResourceFactoryImpl",
+			"id" : "org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl",
+			"values"" : [8871, 2, 0, 1, 0, 0, 2]
+		}
+	]
+}

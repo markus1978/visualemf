@@ -1,0 +1,188 @@
+[
+	{
+		
+		"name" : "Package",
+		"children" : [
+			{
+				
+				"name" : "InterfaceDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "TypeParameter"
+					}, 
+					{
+						
+						"name" : "TypeParameter"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeParameter"
+					}, 
+					{
+						
+						"name" : "TypeParameter"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "EnumDeclaration",
+				"children" : [
+					{
+						
+						"name" : "EnumConstantDeclaration"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "InterfaceDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeParameter"
+					}, 
+					{
+						
+						"name" : "TypeParameter"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}, 
+					{
+						
+						"name" : "TypeParameter"
+					}, 
+					{
+						
+						"name" : "TypeParameter"
+					}
+				]
+			}
+		]
+	}
+]

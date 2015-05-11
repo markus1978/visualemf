@@ -1,0 +1,117 @@
+[
+	{
+		"name" : "Entry",
+		"id" : "java.util.Map.Entry",
+		"links" : ["java.util.Map"]
+	}, 
+	{
+		"name" : "Map",
+		"id" : "java.util.Map",
+		"links" : ["java.lang.Object"]
+	}, 
+	{
+		"name" : "HashMap",
+		"id" : "java.util.HashMap",
+		"links" : ["java.util.Map", "java.io.Serializable", "java.lang.Cloneable", "java.util.AbstractMap"]
+	}, 
+	{
+		"name" : "AbstractMap",
+		"id" : "java.util.AbstractMap",
+		"links" : ["java.util.Map"]
+	}, 
+	{
+		"name" : "Comparator",
+		"id" : "java.util.Comparator",
+		"links" : ["java.lang.Object"]
+	}, 
+	{
+		"name" : "TreeMap",
+		"id" : "java.util.TreeMap",
+		"links" : ["java.util.Map", "java.io.Serializable", "java.lang.Cloneable", "java.util.NavigableMap", "java.lang.Object", "java.util.AbstractMap"]
+	}, 
+	{
+		"name" : "NavigableMap",
+		"id" : "java.util.NavigableMap",
+		"links" : ["java.util.SortedMap"]
+	}, 
+	{
+		"name" : "SortedMap",
+		"id" : "java.util.SortedMap",
+		"links" : ["java.util.Map"]
+	}, 
+	{
+		"name" : "Set",
+		"id" : "java.util.Set",
+		"links" : ["java.util.Collection"]
+	}, 
+	{
+		"name" : "Collection",
+		"id" : "java.util.Collection",
+		"links" : ["java.lang.Iterable", "java.lang.Object"]
+	}, 
+	{
+		"name" : "Iterator",
+		"id" : "java.util.Iterator",
+		"links" : []
+	}, 
+	{
+		"name" : "List",
+		"id" : "java.util.List",
+		"links" : ["java.util.Collection", "java.lang.Object"]
+	}, 
+	{
+		"name" : "ListIterator",
+		"id" : "java.util.ListIterator",
+		"links" : ["java.util.Iterator"]
+	}, 
+	{
+		"name" : "ArrayList",
+		"id" : "java.util.ArrayList",
+		"links" : ["java.util.AbstractList", "java.io.Serializable", "java.util.List", "java.util.RandomAccess", "java.lang.Cloneable"]
+	}, 
+	{
+		"name" : "AbstractList",
+		"id" : "java.util.AbstractList",
+		"links" : ["java.util.List", "java.util.AbstractCollection"]
+	}, 
+	{
+		"name" : "AbstractCollection",
+		"id" : "java.util.AbstractCollection",
+		"links" : ["java.util.Collection"]
+	}, 
+	{
+		"name" : "RandomAccess",
+		"id" : "java.util.RandomAccess",
+		"links" : []
+	}, 
+	{
+		"name" : "Stack",
+		"id" : "java.util.Stack",
+		"links" : ["java.util.Vector", "java.lang.Object"]
+	}, 
+	{
+		"name" : "Vector",
+		"id" : "java.util.Vector",
+		"links" : ["java.util.AbstractList", "java.io.Serializable", "java.util.List", "java.util.RandomAccess", "java.lang.Cloneable"]
+	}, 
+	{
+		"name" : "LinkedList",
+		"id" : "java.util.LinkedList",
+		"links" : ["java.io.Serializable", "java.util.AbstractSequentialList", "java.util.List", "java.lang.Cloneable", "java.util.Deque"]
+	}, 
+	{
+		"name" : "AbstractSequentialList",
+		"id" : "java.util.AbstractSequentialList",
+		"links" : ["java.util.AbstractList"]
+	}, 
+	{
+		"name" : "Deque",
+		"id" : "java.util.Deque",
+		"links" : ["java.util.Queue"]
+	}, 
+	{
+		"name" : "Queue",
+		"id" : "java.util.Queue",
+		"links" : ["java.util.Collection", "java.lang.Object"]
+	}
+]

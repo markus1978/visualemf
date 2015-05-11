@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated modisco-data -->
+      <package
+            uri="http://hub.de/2015/VisualEMF/ModiscoData"
+            class="de.hub.visualemf.modiscodata.ModiscoDataPackage"
+            genModel="model/modisco-data.genmodel"/>
+   </extension>
+
+</plugin>

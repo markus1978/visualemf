@@ -1,0 +1,82 @@
+[
+	{
+		"name" : "AccessNotifyingEListWrapper",
+		"id" : "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl.AccessNotifyingEListWrapper",
+		"links" : ["org.eclipse.emf.ecore.util.InternalEList", "org.eclipse.emf.ecore.util.InternalEList.Unsettable", "java.util.List", "java.util.Iterator", "org.eclipse.emf.ecore.EObject", "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl", "java.util.Collection", "java.util.ListIterator", "org.eclipse.emf.ecore.EStructuralFeature", "org.eclipse.emf.common.notify.NotificationChain", "org.eclipse.emf.ecore.EStructuralFeature.Setting", "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl.AccessNotifyingEListWrapper", "org.eclipse.emf.common.util.EList", "java.lang.Object"]
+	}, 
+	{
+		"name" : "AccessNotifyingEObjectImpl",
+		"id" : "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl",
+		"links" : ["de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl.AccessNotifyingEListWrapper", "org.eclipse.emf.ecore.util.FeatureMapUtil", "org.eclipse.emf.ecore.resource.Resource.Internal", "org.eclipse.emf.ecore.impl.BasicEObjectImpl", "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl", "org.eclipse.emf.ecore.InternalEObject", "org.eclipse.emf.common.util.EList", "org.eclipse.emf.ecore.EStructuralFeature", "org.eclipse.emf.ecore.ETypedElement", "java.lang.Object", "org.eclipse.emf.ecore.impl.MinimalEObjectImpl"]
+	}, 
+	{
+		"name" : "UUIDEObjectInputStream",
+		"id" : "de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl.UUIDEObjectInputStream",
+		"links" : ["de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl", "org.eclipse.emf.ecore.EFactory", "java.util.List", "org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream", "org.eclipse.emf.ecore.InternalEObject"]
+	}, 
+	{
+		"name" : "UUIDEObjectOutputStream",
+		"id" : "de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl.UUIDEObjectOutputStream",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream.EStructuralFeatureData", "de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl", "java.util.Map", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream", "de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl.UUIDEObjectOutputStream", "org.eclipse.emf.ecore.EObject", "org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.ecore.InternalEObject", "de.hub.emffrag.fragmentation.FObject"]
+	}, 
+	{
+		"name" : "UUIDBinaryResourceImpl",
+		"id" : "de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl",
+		"links" : ["de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl", "java.util.SortedMap", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream", "java.lang.String", "org.eclipse.emf.ecore.EObject", "java.io.InputStream", "org.eclipse.emf.ecore.resource.URIConverter.Saveable", "java.lang.Integer", "java.util.Map", "org.eclipse.emf.ecore.util.EcoreUtil", "java.io.OutputStream", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl", "org.eclipse.emf.ecore.resource.URIConverter.Loadable", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream", "org.eclipse.emf.ecore.InternalEObject", "org.eclipse.emf.common.util.URI"]
+	}, 
+	{
+		"name" : "FObject",
+		"id" : "de.hub.emffrag.fragmentation.FObject",
+		"links" : ["org.eclipse.emf.ecore.EObject", "de.hub.emffrag.fragmentation.Fragment", "de.hub.emffrag.fragmentation.Fragmentation"]
+	}, 
+	{
+		"name" : "UserObjectID",
+		"id" : "de.hub.emffrag.fragmentation.UserCaches.UserObjectID",
+		"links" : ["java.lang.Object", "de.hub.emffrag.fragmentation.UserCaches"]
+	}, 
+	{
+		"name" : "UserReferenceID",
+		"id" : "de.hub.emffrag.fragmentation.UserCaches.UserReferenceID",
+		"links" : ["java.lang.Object", "de.hub.emffrag.fragmentation.UserCaches"]
+	}, 
+	{
+		"name" : "UserCaches",
+		"id" : "de.hub.emffrag.fragmentation.UserCaches",
+		"links" : ["de.hub.emffrag.fragmentation.FObjectImpl", "com.google.common.cache.CacheBuilder", "org.eclipse.emf.common.util.EList", "com.google.common.cache.Cache"]
+	}, 
+	{
+		"name" : "Fragmentation",
+		"id" : "de.hub.emffrag.fragmentation.Fragmentation",
+		"links" : ["org.eclipse.emf.ecore.EModelElement", "org.eclipse.emf.ecore.resource.impl.ResourceImpl", "java.util.List", "org.eclipse.emf.ecore.EObject", "de.hub.emffrag.datastore.IDataMap", "de.hub.emffrag.EmfFragActivator", "org.eclipse.emf.ecore.resource.impl.ResourceSetImpl", "de.hub.emffrag.fragmentation.FObjectImpl", "java.util.Map", "de.hub.emffrag.fragmentation.FragmentsCache", "java.lang.Throwable", "org.apache.commons.lang3.reflect.FieldUtils", "org.eclipse.emf.ecore.impl.BasicEObjectImpl", "org.eclipse.emf.common.util.EList", "de.hub.emffrag.fragmentation.PooledStackMultiMap.Nullable", "java.lang.Object", "de.hub.emffrag.fragmentation.UserCaches", "java.lang.String", "java.util.Iterator", "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl", "de.hub.emffrag.fragmentation.Fragmentation", "org.eclipse.emf.ecore.resource.URIConverter", "de.hub.emffrag.fragmentation.Fragment", "org.eclipse.emf.ecore.EStructuralFeature", "de.hub.emffrag.datastore.IDataStore", "java.lang.Integer", "org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.common.util.URI", "de.hub.emffrag.datastore.IBaseDataStore", "org.eclipse.emf.common.notify.Notification", "de.hub.util.Ansi"]
+	}, 
+	{
+		"name" : "Nullable",
+		"id" : "de.hub.emffrag.fragmentation.PooledStackMultiMap.Nullable",
+		"links" : ["de.hub.emffrag.fragmentation.PooledStackMultiMap"]
+	}, 
+	{
+		"name" : "PooledStackMultiMap",
+		"id" : "de.hub.emffrag.fragmentation.PooledStackMultiMap",
+		"links" : ["java.util.Map", "java.util.Stack", "de.hub.emffrag.fragmentation.PooledStackMultiMap", "de.hub.emffrag.fragmentation.PooledStackMultiMap.Nullable", "java.util.Vector"]
+	}, 
+	{
+		"name" : "FragmentsCacheListener",
+		"id" : "de.hub.emffrag.fragmentation.FragmentsCache.FragmentsCacheListener",
+		"links" : ["de.hub.emffrag.fragmentation.FragmentsCache", "de.hub.emffrag.fragmentation.Fragment"]
+	}, 
+	{
+		"name" : "FragmentsCache",
+		"id" : "de.hub.emffrag.fragmentation.FragmentsCache",
+		"links" : ["de.hub.emffrag.fragmentation.FragmentsCache.FragmentsCacheListener", "de.hub.emffrag.fragmentation.FragmentsCache", "java.util.Queue", "java.util.Collection", "de.hub.emffrag.fragmentation.Fragment"]
+	}, 
+	{
+		"name" : "FObjectImpl",
+		"id" : "de.hub.emffrag.fragmentation.FObjectImpl",
+		"links" : ["de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl", "org.eclipse.emf.ecore.resource.impl.ResourceImpl", "org.eclipse.emf.ecore.resource.Resource.Internal", "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl", "de.hub.emffrag.fragmentation.Fragment", "de.hub.emffrag.fragmentation.Fragmentation", "org.eclipse.emf.ecore.EStructuralFeature", "org.eclipse.emf.ecore.impl.MinimalEObjectImpl", "org.eclipse.emf.common.notify.NotificationChain", "de.hub.emffrag.fragmentation.FObjectImpl", "java.lang.Class", "org.eclipse.emf.ecore.util.EcoreUtil", "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl.AccessNotifyingEListWrapper", "de.hub.emffrag.fragmentation.PooledStackMultiMap", "org.eclipse.emf.ecore.impl.BasicEObjectImpl", "de.hub.emffrag.fragmentation.FObject", "org.eclipse.emf.ecore.InternalEObject", "org.eclipse.emf.common.util.EList", "org.eclipse.emf.ecore.EClass", "org.eclipse.emf.common.notify.Notification", "de.hub.emffrag.fragmentation.UserCaches"]
+	}, 
+	{
+		"name" : "Fragment",
+		"id" : "de.hub.emffrag.fragmentation.Fragment",
+		"links" : ["de.hub.emffrag.fragmentation.UUIDBinaryResourceImpl", "org.eclipse.emf.ecore.resource.impl.ResourceImpl", "java.util.List", "java.util.Iterator", "de.hub.emffrag.fragmentation.AccessNotifyingEObjectImpl", "de.hub.emffrag.fragmentation.Fragment", "de.hub.emffrag.fragmentation.Fragmentation", "org.eclipse.emf.ecore.impl.MinimalEObjectImpl", "org.eclipse.emf.common.notify.NotificationChain", "de.hub.emffrag.fragmentation.FObjectImpl", "org.eclipse.emf.ecore.resource.ResourceSet", "org.eclipse.emf.ecore.InternalEObject", "de.hub.emffrag.fragmentation.FObject", "org.eclipse.emf.common.util.URI", "org.eclipse.emf.common.notify.Notification", "de.hub.emffrag.fragmentation.UserCaches"]
+	}
+]

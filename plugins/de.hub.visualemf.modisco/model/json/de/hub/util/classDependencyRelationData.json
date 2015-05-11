@@ -1,0 +1,7 @@
+[
+	{
+		"name" : "Ansi",
+		"id" : "de.hub.util.Ansi",
+		"links" : ["java.lang.AbstractStringBuilder", "java.lang.Enum", "java.lang.String", "java.lang.StringBuilder", "de.hub.util.Ansi"]
+	}
+]

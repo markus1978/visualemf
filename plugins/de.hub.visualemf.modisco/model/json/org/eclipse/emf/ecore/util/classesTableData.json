@@ -1,0 +1,25 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "FeatureMapUtil",
+			"id" : "org.eclipse.emf.ecore.util.FeatureMapUtil",
+			"values"" : [8923, 0, 0, 1, 1, 0, 3]
+		},
+		{
+			"name" : "Unsettable",
+			"id" : "org.eclipse.emf.ecore.util.InternalEList.Unsettable",
+			"values"" : [8923, 5, 0, 1, 0, 47, 2]
+		},
+		{
+			"name" : "InternalEList",
+			"id" : "org.eclipse.emf.ecore.util.InternalEList",
+			"values"" : [8961, 5, 0, 4, 18, 29, 60]
+		},
+		{
+			"name" : "EcoreUtil",
+			"id" : "org.eclipse.emf.ecore.util.EcoreUtil",
+			"values"" : [8969, 0, 0, 3, 2, 0, 10]
+		}
+	]
+}

@@ -1,0 +1,40 @@
+[
+	{
+		
+		"name" : "Package",
+		"children" : [
+			{
+				
+				"name" : "InterfaceDeclaration"
+			}, 
+			{
+				
+				"name" : "InterfaceDeclaration",
+				"children" : [
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}, 
+			{
+				
+				"name" : "InterfaceDeclaration"
+			}, 
+			{
+				
+				"name" : "InterfaceDeclaration",
+				"children" : [
+					{
+						
+						"name" : "MethodDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,115 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "Serializable",
+			"id" : "java.io.Serializable",
+			"values"" : [9045, 0, 0, 0, 0, 0, 0]
+		},
+		{
+			"name" : "PrintStream",
+			"id" : "java.io.PrintStream",
+			"values"" : [9047, 4, 0, 4, 1, 1, 6]
+		},
+		{
+			"name" : "FilterOutputStream",
+			"id" : "java.io.FilterOutputStream",
+			"values"" : [9047, 3, 0, 1, 0, 1, 1]
+		},
+		{
+			"name" : "OutputStream",
+			"id" : "java.io.OutputStream",
+			"values"" : [9047, 2, 0, 2, 1, 0, 3]
+		},
+		{
+			"name" : "Closeable",
+			"id" : "java.io.Closeable",
+			"values"" : [9047, 1, 0, 1, 0, 0, 1]
+		},
+		{
+			"name" : "Flushable",
+			"id" : "java.io.Flushable",
+			"values"" : [9047, 0, 0, 0, 0, 0, 0]
+		},
+		{
+			"name" : "IOException",
+			"id" : "java.io.IOException",
+			"values"" : [9047, 3, 0, 1, 0, 2, 4]
+		},
+		{
+			"name" : "InputStream",
+			"id" : "java.io.InputStream",
+			"values"" : [9047, 2, 0, 1, 0, 0, 1]
+		},
+		{
+			"name" : "InputStreamReader",
+			"id" : "java.io.InputStreamReader",
+			"values"" : [9047, 3, 0, 1, 0, 2, 6]
+		},
+		{
+			"name" : "Reader",
+			"id" : "java.io.Reader",
+			"values"" : [9053, 2, 0, 2, 2, 0, 10]
+		},
+		{
+			"name" : "PrintWriter",
+			"id" : "java.io.PrintWriter",
+			"values"" : [9055, 3, 0, 2, 2, 0, 8]
+		},
+		{
+			"name" : "Writer",
+			"id" : "java.io.Writer",
+			"values"" : [9055, 2, 0, 3, 0, 0, 3]
+		},
+		{
+			"name" : "UnsupportedEncodingException",
+			"id" : "java.io.UnsupportedEncodingException",
+			"values"" : [9055, 4, 0, 1, 0, 2, 1]
+		},
+		{
+			"name" : "ByteArrayInputStream",
+			"id" : "java.io.ByteArrayInputStream",
+			"values"" : [9055, 3, 0, 1, 0, 0, 4]
+		},
+		{
+			"name" : "ByteArrayOutputStream",
+			"id" : "java.io.ByteArrayOutputStream",
+			"values"" : [9055, 3, 0, 1, 2, 1, 3]
+		},
+		{
+			"name" : "File",
+			"id" : "java.io.File",
+			"values"" : [9055, 1, 0, 2, 5, 0, 12]
+		},
+		{
+			"name" : "FileInputStream",
+			"id" : "java.io.FileInputStream",
+			"values"" : [9055, 3, 0, 1, 0, 0, 4]
+		},
+		{
+			"name" : "FileNotFoundException",
+			"id" : "java.io.FileNotFoundException",
+			"values"" : [9055, 4, 0, 1, 0, 2, 1]
+		},
+		{
+			"name" : "FileOutputStream",
+			"id" : "java.io.FileOutputStream",
+			"values"" : [9055, 3, 0, 1, 0, 1, 4]
+		},
+		{
+			"name" : "BufferedInputStream",
+			"id" : "java.io.BufferedInputStream",
+			"values"" : [9055, 4, 0, 1, 0, 0, 6]
+		},
+		{
+			"name" : "FilterInputStream",
+			"id" : "java.io.FilterInputStream",
+			"values"" : [9055, 3, 0, 1, 0, 0, 1]
+		},
+		{
+			"name" : "BufferedOutputStream",
+			"id" : "java.io.BufferedOutputStream",
+			"values"" : [9055, 4, 0, 1, 0, 1, 6]
+		}
+	]
+}

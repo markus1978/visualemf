@@ -1,0 +1,20 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "GenericDeclaration",
+			"id" : "java.lang.reflect.GenericDeclaration",
+			"values"" : [9045, 1, 0, 1, 0, 0, 1]
+		},
+		{
+			"name" : "AnnotatedElement",
+			"id" : "java.lang.reflect.AnnotatedElement",
+			"values"" : [9045, 0, 0, 0, 0, 0, 0]
+		},
+		{
+			"name" : "Type",
+			"id" : "java.lang.reflect.Type",
+			"values"" : [9045, 0, 0, 0, 0, 0, 0]
+		}
+	]
+}

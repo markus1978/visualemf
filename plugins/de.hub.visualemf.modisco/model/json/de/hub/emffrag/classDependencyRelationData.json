@@ -1,0 +1,7 @@
+[
+	{
+		"name" : "EmfFragActivator",
+		"id" : "de.hub.emffrag.EmfFragActivator",
+		"links" : ["org.osgi.framework.Bundle", "java.lang.String", "de.hub.emffrag.EmfFragActivator", "org.eclipse.emf.ecore.resource.Resource.Factory.Registry", "org.osgi.framework.BundleContext", "java.util.Map", "org.eclipse.core.runtime.ILog", "org.eclipse.core.runtime.Plugin", "java.lang.Throwable", "org.junit.Assert", "org.eclipse.emf.ecore.EPackage", "java.io.PrintStream", "java.lang.Exception"]
+	}
+]

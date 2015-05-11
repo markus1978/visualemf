@@ -1,0 +1,17 @@
+[
+	{
+		"name" : "URI",
+		"id" : "org.eclipse.emf.common.util.URI",
+		"links" : ["java.lang.String"]
+	}, 
+	{
+		"name" : "EList",
+		"id" : "org.eclipse.emf.common.util.EList",
+		"links" : ["java.util.List", "java.lang.Object"]
+	}, 
+	{
+		"name" : "TreeIterator",
+		"id" : "org.eclipse.emf.common.util.TreeIterator",
+		"links" : ["java.util.Iterator"]
+	}
+]

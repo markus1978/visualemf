@@ -1,0 +1,25 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "Cache",
+			"id" : "com.google.common.cache.Cache",
+			"values"" : [9153, 0, 0, 1, 3, 0, 13]
+		},
+		{
+			"name" : "CacheBuilder",
+			"id" : "com.google.common.cache.CacheBuilder",
+			"values"" : [9157, 0, 0, 1, 5, 0, 11]
+		},
+		{
+			"name" : "RemovalListener",
+			"id" : "com.google.common.cache.RemovalListener",
+			"values"" : [9157, 0, 0, 0, 0, 0, 2]
+		},
+		{
+			"name" : "RemovalNotification",
+			"id" : "com.google.common.cache.RemovalNotification",
+			"values"" : [9157, 1, 0, 1, 2, 2, 5]
+		}
+	]
+}

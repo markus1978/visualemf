@@ -1,0 +1,1086 @@
+[
+	{
+		
+		"name" : "Package",
+		"children" : [
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "Modifier"
+					}, 
+					{
+						
+						"name" : "EnumDeclaration",
+						"children" : [
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "FieldDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}, 
+									{
+										
+										"name" : "VariableDeclarationFragment"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "ConstructorDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "Block",
+										"children" : [
+											{
+												
+												"name" : "ExpressionStatement",
+												"children" : [
+													{
+														
+														"name" : "Assignment",
+														"children" : [
+															{
+																
+																"name" : "FieldAccess",
+																"children" : [
+																	{
+																		
+																		"name" : "SingleVariableAccess"
+																	}, 
+																	{
+																		
+																		"name" : "ThisExpression"
+																	}
+																]
+															}, 
+															{
+																
+																"name" : "MethodInvocation",
+																"children" : [
+																	{
+																		
+																		"name" : "SingleVariableAccess"
+																	}, 
+																	{
+																		
+																		"name" : "TypeAccess"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "SingleVariableDeclaration",
+										"children" : [
+											{
+												
+												"name" : "Modifier"
+											}, 
+											{
+												
+												"name" : "TypeAccess"
+											}
+										]
+									}
+								]
+							}, 
+							{
+								
+								"name" : "MethodDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "Block",
+										"children" : [
+											{
+												
+												"name" : "ReturnStatement",
+												"children" : [
+													{
+														
+														"name" : "InfixExpression",
+														"children" : [
+															{
+																
+																"name" : "SingleVariableAccess"
+															}, 
+															{
+																
+																"name" : "StringLiteral"
+															}
+														]
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "NumberLiteral"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "NumberLiteral"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "NumberLiteral"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "NumberLiteral"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "NumberLiteral"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "NumberLiteral"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "NumberLiteral"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "EnumDeclaration",
+						"children" : [
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "MethodDeclaration"
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "EnumConstantDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "LineComment"
+							}, 
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "TypeAccess"
+							}, 
+							{
+								
+								"name" : "VariableDeclarationFragment",
+								"children" : [
+									{
+										
+										"name" : "StringLiteral"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "TypeAccess"
+							}, 
+							{
+								
+								"name" : "VariableDeclarationFragment",
+								"children" : [
+									{
+										
+										"name" : "StringLiteral"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "TypeAccess"
+							}, 
+							{
+								
+								"name" : "VariableDeclarationFragment",
+								"children" : [
+									{
+										
+										"name" : "StringLiteral"
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "FieldDeclaration",
+						"children" : [
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "TypeAccess"
+							}, 
+							{
+								
+								"name" : "VariableDeclarationFragment",
+								"children" : [
+									{
+										
+										"name" : "InfixExpression",
+										"children" : [
+											{
+												
+												"name" : "SingleVariableAccess"
+											}, 
+											{
+												
+												"name" : "SingleVariableAccess"
+											}
+										]
+									}
+								]
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "Block",
+								"children" : [
+									{
+										
+										"name" : "ReturnStatement",
+										"children" : [
+											{
+												
+												"name" : "MethodInvocation",
+												"children" : [
+													{
+														
+														"name" : "SingleVariableAccess"
+													}, 
+													{
+														
+														"name" : "NullLiteral"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}, 
+													{
+														
+														"name" : "NullLiteral"
+													}
+												]
+											}
+										]
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "TypeAccess"
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "Block",
+								"children" : [
+									{
+										
+										"name" : "ReturnStatement",
+										"children" : [
+											{
+												
+												"name" : "MethodInvocation",
+												"children" : [
+													{
+														
+														"name" : "SingleVariableAccess"
+													}, 
+													{
+														
+														"name" : "NullLiteral"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}
+										]
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "TypeAccess"
+							}
+						]
+					}, 
+					{
+						
+						"name" : "MethodDeclaration",
+						"children" : [
+							{
+								
+								"name" : "Modifier"
+							}, 
+							{
+								
+								"name" : "Block",
+								"children" : [
+									{
+										
+										"name" : "VariableDeclarationStatement",
+										"children" : [
+											{
+												
+												"name" : "TypeAccess"
+											}, 
+											{
+												
+												"name" : "VariableDeclarationFragment",
+												"children" : [
+													{
+														
+														"name" : "ClassInstanceCreation",
+														"children" : [
+															{
+																
+																"name" : "TypeAccess"
+															}
+														]
+													}
+												]
+											}, 
+											{
+												
+												"name" : "Modifier"
+											}
+										]
+									}, 
+									{
+										
+										"name" : "IfStatement",
+										"children" : [
+											{
+												
+												"name" : "InfixExpression",
+												"children" : [
+													{
+														
+														"name" : "NullLiteral"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}, 
+											{
+												
+												"name" : "ExpressionStatement",
+												"children" : [
+													{
+														
+														"name" : "MethodInvocation",
+														"children" : [
+															{
+																
+																"name" : "SingleVariableAccess"
+															}, 
+															{
+																
+																"name" : "SingleVariableAccess"
+															}
+														]
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "IfStatement",
+										"children" : [
+											{
+												
+												"name" : "InfixExpression",
+												"children" : [
+													{
+														
+														"name" : "NullLiteral"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}, 
+											{
+												
+												"name" : "Block",
+												"children" : [
+													{
+														
+														"name" : "IfStatement",
+														"children" : [
+															{
+																
+																"name" : "InfixExpression",
+																"children" : [
+																	{
+																		
+																		"name" : "NumberLiteral"
+																	}, 
+																	{
+																		
+																		"name" : "MethodInvocation",
+																		"children" : [
+																			{
+																				
+																				"name" : "SingleVariableAccess"
+																			}
+																		]
+																	}
+																]
+															}, 
+															{
+																
+																"name" : "ExpressionStatement",
+																"children" : [
+																	{
+																		
+																		"name" : "MethodInvocation",
+																		"children" : [
+																			{
+																				
+																				"name" : "SingleVariableAccess"
+																			}, 
+																			{
+																				
+																				"name" : "SingleVariableAccess"
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}, 
+													{
+														
+														"name" : "ExpressionStatement",
+														"children" : [
+															{
+																
+																"name" : "MethodInvocation",
+																"children" : [
+																	{
+																		
+																		"name" : "InfixExpression",
+																		"children" : [
+																			{
+																				
+																				"name" : "MethodInvocation",
+																				"children" : [
+																					{
+																						
+																						"name" : "SingleVariableAccess"
+																					}
+																				]
+																			}, 
+																			{
+																				
+																				"name" : "NumberLiteral"
+																			}
+																		]
+																	}, 
+																	{
+																		
+																		"name" : "SingleVariableAccess"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "IfStatement",
+										"children" : [
+											{
+												
+												"name" : "InfixExpression",
+												"children" : [
+													{
+														
+														"name" : "NullLiteral"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}, 
+											{
+												
+												"name" : "Block",
+												"children" : [
+													{
+														
+														"name" : "IfStatement",
+														"children" : [
+															{
+																
+																"name" : "InfixExpression",
+																"children" : [
+																	{
+																		
+																		"name" : "NumberLiteral"
+																	}, 
+																	{
+																		
+																		"name" : "MethodInvocation",
+																		"children" : [
+																			{
+																				
+																				"name" : "SingleVariableAccess"
+																			}
+																		]
+																	}
+																]
+															}, 
+															{
+																
+																"name" : "ExpressionStatement",
+																"children" : [
+																	{
+																		
+																		"name" : "MethodInvocation",
+																		"children" : [
+																			{
+																				
+																				"name" : "SingleVariableAccess"
+																			}, 
+																			{
+																				
+																				"name" : "SingleVariableAccess"
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}, 
+													{
+														
+														"name" : "ExpressionStatement",
+														"children" : [
+															{
+																
+																"name" : "MethodInvocation",
+																"children" : [
+																	{
+																		
+																		"name" : "InfixExpression",
+																		"children" : [
+																			{
+																				
+																				"name" : "MethodInvocation",
+																				"children" : [
+																					{
+																						
+																						"name" : "SingleVariableAccess"
+																					}
+																				]
+																			}, 
+																			{
+																				
+																				"name" : "NumberLiteral"
+																			}
+																		]
+																	}, 
+																	{
+																		
+																		"name" : "SingleVariableAccess"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "ExpressionStatement",
+										"children" : [
+											{
+												
+												"name" : "MethodInvocation",
+												"children" : [
+													{
+														
+														"name" : "NumberLiteral"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "ExpressionStatement",
+										"children" : [
+											{
+												
+												"name" : "MethodInvocation",
+												"children" : [
+													{
+														
+														"name" : "SingleVariableAccess"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "ExpressionStatement",
+										"children" : [
+											{
+												
+												"name" : "MethodInvocation",
+												"children" : [
+													{
+														
+														"name" : "SingleVariableAccess"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "ExpressionStatement",
+										"children" : [
+											{
+												
+												"name" : "MethodInvocation",
+												"children" : [
+													{
+														
+														"name" : "SingleVariableAccess"
+													}, 
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}
+										]
+									}, 
+									{
+										
+										"name" : "ReturnStatement",
+										"children" : [
+											{
+												
+												"name" : "MethodInvocation",
+												"children" : [
+													{
+														
+														"name" : "SingleVariableAccess"
+													}
+												]
+											}
+										]
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "SingleVariableDeclaration",
+								"children" : [
+									{
+										
+										"name" : "Modifier"
+									}, 
+									{
+										
+										"name" : "TypeAccess"
+									}
+								]
+							}, 
+							{
+								
+								"name" : "TypeAccess"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

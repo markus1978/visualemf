@@ -1,0 +1,142 @@
+[
+	{
+		"name" : "Exception",
+		"id" : "java.lang.Exception",
+		"links" : ["java.lang.Throwable"]
+	}, 
+	{
+		"name" : "Throwable",
+		"id" : "java.lang.Throwable",
+		"links" : ["java.io.Serializable"]
+	}, 
+	{
+		"name" : "Object",
+		"id" : "java.lang.Object",
+		"links" : []
+	}, 
+	{
+		"name" : "String",
+		"id" : "java.lang.String",
+		"links" : ["java.io.Serializable", "java.lang.String", "java.lang.CharSequence", "java.lang.Object", "java.lang.Comparable"]
+	}, 
+	{
+		"name" : "Comparable",
+		"id" : "java.lang.Comparable",
+		"links" : []
+	}, 
+	{
+		"name" : "CharSequence",
+		"id" : "java.lang.CharSequence",
+		"links" : []
+	}, 
+	{
+		"name" : "System",
+		"id" : "java.lang.System",
+		"links" : []
+	}, 
+	{
+		"name" : "AutoCloseable",
+		"id" : "java.lang.AutoCloseable",
+		"links" : []
+	}, 
+	{
+		"name" : "Appendable",
+		"id" : "java.lang.Appendable",
+		"links" : []
+	}, 
+	{
+		"name" : "Number",
+		"id" : "java.lang.Number",
+		"links" : ["java.io.Serializable"]
+	}, 
+	{
+		"name" : "Cloneable",
+		"id" : "java.lang.Cloneable",
+		"links" : []
+	}, 
+	{
+		"name" : "Readable",
+		"id" : "java.lang.Readable",
+		"links" : []
+	}, 
+	{
+		"name" : "RuntimeException",
+		"id" : "java.lang.RuntimeException",
+		"links" : ["java.lang.Exception"]
+	}, 
+	{
+		"name" : "StringBuilder",
+		"id" : "java.lang.StringBuilder",
+		"links" : ["java.lang.AbstractStringBuilder", "java.io.Serializable", "java.lang.String", "java.lang.CharSequence", "java.lang.Object"]
+	}, 
+	{
+		"name" : "AbstractStringBuilder",
+		"id" : "java.lang.AbstractStringBuilder",
+		"links" : ["java.lang.CharSequence", "java.lang.Appendable"]
+	}, 
+	{
+		"name" : "Integer",
+		"id" : "java.lang.Integer",
+		"links" : ["java.lang.Integer", "java.lang.String", "java.lang.Number", "java.lang.Comparable"]
+	}, 
+	{
+		"name" : "Iterable",
+		"id" : "java.lang.Iterable",
+		"links" : []
+	}, 
+	{
+		"name" : "IndexOutOfBoundsException",
+		"id" : "java.lang.IndexOutOfBoundsException",
+		"links" : ["java.lang.RuntimeException"]
+	}, 
+	{
+		"name" : "IllegalArgumentException",
+		"id" : "java.lang.IllegalArgumentException",
+		"links" : ["java.lang.RuntimeException"]
+	}, 
+	{
+		"name" : "StringBuffer",
+		"id" : "java.lang.StringBuffer",
+		"links" : ["java.lang.AbstractStringBuilder", "java.io.Serializable", "java.lang.String", "java.lang.CharSequence"]
+	}, 
+	{
+		"name" : "Long",
+		"id" : "java.lang.Long",
+		"links" : ["java.lang.Number", "java.lang.Comparable"]
+	}, 
+	{
+		"name" : "Math",
+		"id" : "java.lang.Math",
+		"links" : []
+	}, 
+	{
+		"name" : "UnsupportedOperationException",
+		"id" : "java.lang.UnsupportedOperationException",
+		"links" : ["java.lang.RuntimeException"]
+	}, 
+	{
+		"name" : "IllegalStateException",
+		"id" : "java.lang.IllegalStateException",
+		"links" : ["java.lang.RuntimeException"]
+	}, 
+	{
+		"name" : "Class",
+		"id" : "java.lang.Class",
+		"links" : ["java.io.Serializable", "java.lang.reflect.AnnotatedElement", "java.lang.reflect.Type", "java.lang.reflect.GenericDeclaration"]
+	}, 
+	{
+		"name" : "IllegalAccessException",
+		"id" : "java.lang.IllegalAccessException",
+		"links" : ["java.lang.ReflectiveOperationException"]
+	}, 
+	{
+		"name" : "ReflectiveOperationException",
+		"id" : "java.lang.ReflectiveOperationException",
+		"links" : ["java.lang.Exception"]
+	}, 
+	{
+		"name" : "Enum",
+		"id" : "java.lang.Enum",
+		"links" : ["java.io.Serializable", "java.lang.Comparable"]
+	}
+]

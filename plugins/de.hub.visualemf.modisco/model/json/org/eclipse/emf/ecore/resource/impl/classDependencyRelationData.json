@@ -1,0 +1,67 @@
+[
+	{
+		"name" : "ResourceFactoryImpl",
+		"id" : "org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl",
+		"links" : ["org.eclipse.emf.ecore.resource.Resource.Factory"]
+	}, 
+	{
+		"name" : "URIHandlerImpl",
+		"id" : "org.eclipse.emf.ecore.resource.impl.URIHandlerImpl",
+		"links" : ["org.eclipse.emf.ecore.resource.URIHandler"]
+	}, 
+	{
+		"name" : "EClassData",
+		"id" : "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream.EClassData",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream"]
+	}, 
+	{
+		"name" : "EStructuralFeatureData",
+		"id" : "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream.EStructuralFeatureData",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream"]
+	}, 
+	{
+		"name" : "EObjectOutputStream",
+		"id" : "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream.EStructuralFeatureData", "java.lang.String", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl", "org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.BinaryIO", "org.eclipse.emf.common.util.URI", "org.eclipse.emf.ecore.InternalEObject", "org.eclipse.emf.ecore.EClass"]
+	}, 
+	{
+		"name" : "BinaryIO",
+		"id" : "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.BinaryIO",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl"]
+	}, 
+	{
+		"name" : "EClassData",
+		"id" : "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream.EClassData",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream"]
+	}, 
+	{
+		"name" : "EStructuralFeatureData",
+		"id" : "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream.EStructuralFeatureData",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream"]
+	}, 
+	{
+		"name" : "EObjectInputStream",
+		"id" : "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl", "org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.BinaryIO", "org.eclipse.emf.ecore.InternalEObject", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream.EClassData", "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectInputStream.EStructuralFeatureData"]
+	}, 
+	{
+		"name" : "BinaryResourceImpl",
+		"id" : "org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl",
+		"links" : ["org.eclipse.emf.ecore.resource.impl.ResourceImpl", "java.util.Map"]
+	}, 
+	{
+		"name" : "ResourceImpl",
+		"id" : "org.eclipse.emf.ecore.resource.impl.ResourceImpl",
+		"links" : ["java.util.Map", "org.eclipse.emf.common.notify.impl.NotifierImpl", "java.util.List", "org.eclipse.emf.ecore.resource.Resource.Internal", "org.eclipse.emf.ecore.resource.ResourceSet", "org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.ecore.InternalEObject", "org.eclipse.emf.common.notify.NotificationChain"]
+	}, 
+	{
+		"name" : "ExtensibleURIConverterImpl",
+		"id" : "org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl",
+		"links" : ["org.eclipse.emf.ecore.resource.URIConverter"]
+	}, 
+	{
+		"name" : "ResourceSetImpl",
+		"id" : "org.eclipse.emf.ecore.resource.impl.ResourceSetImpl",
+		"links" : ["org.eclipse.emf.common.notify.impl.NotifierImpl", "org.eclipse.emf.ecore.resource.ResourceSet", "org.eclipse.emf.ecore.resource.Resource", "org.eclipse.emf.common.util.URI"]
+	}
+]

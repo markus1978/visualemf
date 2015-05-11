@@ -1,0 +1,22 @@
+[
+	{
+		"name" : "Cache",
+		"id" : "com.google.common.cache.Cache",
+		"links" : ["java.lang.Object"]
+	}, 
+	{
+		"name" : "CacheBuilder",
+		"id" : "com.google.common.cache.CacheBuilder",
+		"links" : ["com.google.common.cache.RemovalListener"]
+	}, 
+	{
+		"name" : "RemovalListener",
+		"id" : "com.google.common.cache.RemovalListener",
+		"links" : []
+	}, 
+	{
+		"name" : "RemovalNotification",
+		"id" : "com.google.common.cache.RemovalNotification",
+		"links" : ["java.util.Map.Entry"]
+	}
+]

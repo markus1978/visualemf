@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+svg {
+  font: 12px helvetica, sans-serif;
+}
+
+.coordLines path {
+  fill: none;
+}
+
+.selected {
+  stroke: #00F;
+  color: #00F;
+}
+
+.not-selected {
+  stroke: #777;
+  color: #000;
+}
+
+.brush .extent {
+  fill-opacity: .3;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+}
+
+.axis text {
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+  cursor: move;
+}
+
+path.arc {
+  cursor: move;
+  fill: #fff;
+}
+
+.node {
+  font-size: 10px;
+}
+
+.node:hover {
+  fill: #1f77b4;
+}
+
+.link {
+  fill: none;
+  stroke: #1f77b4;
+  stroke-opacity: .4;
+  pointer-events: none;
+}
+
+.link.source, .link.target {
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}
+
+.node.target {
+  fill: #d62728 !important;
+}
+
+.link.source {
+  stroke: #d62728;
+}
+
+.node.source {
+  fill: #2ca02c;
+}
+
+.link.target {
+  stroke: #2ca02c;
+}
+
+</style>
+<meta charset="UTF-8">
+<title>Example Visualization</title>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="./js/parrallel_coords.js" charset="utf-8"></script>
+<script src="./js/chord.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="metrics"></div>
+    <div id="dependencies"></div>
+    
+    <script>
+    	parrallelCoords.create("classes.json", "#metrics");
+    	chord.create("class-dependencies.json", "#dependencies");
+    	parrallelCoords.handleUserSelect = function(ids) {
+    		chord.select(ids);
+    	};
+    	chord.handleUserSelect = function(ids) {
+    		parrallelCoords.select(ids);
+    	};
+    </script>
+</body>
+</html>

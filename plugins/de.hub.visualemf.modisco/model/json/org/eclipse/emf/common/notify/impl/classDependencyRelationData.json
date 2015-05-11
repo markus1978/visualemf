@@ -1,0 +1,12 @@
+[
+	{
+		"name" : "BasicNotifierImpl",
+		"id" : "org.eclipse.emf.common.notify.impl.BasicNotifierImpl",
+		"links" : ["org.eclipse.emf.common.notify.Notifier", "org.eclipse.emf.common.notify.Notification"]
+	}, 
+	{
+		"name" : "NotifierImpl",
+		"id" : "org.eclipse.emf.common.notify.impl.NotifierImpl",
+		"links" : ["org.eclipse.emf.common.notify.impl.BasicNotifierImpl"]
+	}
+]

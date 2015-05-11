@@ -1,0 +1,22 @@
+[
+	{
+		
+		"name" : "Package",
+		"children" : [
+			{
+				
+				"name" : "ClassDeclaration",
+				"children" : [
+					{
+						
+						"name" : "ConstructorDeclaration"
+					}, 
+					{
+						
+						"name" : "TypeAccess"
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,17 @@
+[
+	{
+		"name" : "Notifier",
+		"id" : "org.eclipse.emf.common.notify.Notifier",
+		"links" : []
+	}, 
+	{
+		"name" : "NotificationChain",
+		"id" : "org.eclipse.emf.common.notify.NotificationChain",
+		"links" : []
+	}, 
+	{
+		"name" : "Notification",
+		"id" : "org.eclipse.emf.common.notify.Notification",
+		"links" : ["java.lang.Class"]
+	}
+]

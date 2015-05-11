@@ -1,0 +1,15 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "ByteBuffer",
+			"id" : "java.nio.ByteBuffer",
+			"values"" : [9145, 1, 0, 2, 6, 0, 18]
+		},
+		{
+			"name" : "Buffer",
+			"id" : "java.nio.Buffer",
+			"values"" : [9145, 0, 0, 0, 0, 0, 0]
+		}
+	]
+}

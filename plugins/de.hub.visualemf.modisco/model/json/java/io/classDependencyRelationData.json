@@ -1,0 +1,112 @@
+[
+	{
+		"name" : "Serializable",
+		"id" : "java.io.Serializable",
+		"links" : []
+	}, 
+	{
+		"name" : "PrintStream",
+		"id" : "java.io.PrintStream",
+		"links" : ["java.io.FilterOutputStream", "java.lang.String", "java.io.Closeable", "java.lang.Appendable"]
+	}, 
+	{
+		"name" : "FilterOutputStream",
+		"id" : "java.io.FilterOutputStream",
+		"links" : ["java.io.OutputStream"]
+	}, 
+	{
+		"name" : "OutputStream",
+		"id" : "java.io.OutputStream",
+		"links" : ["java.io.Flushable", "java.io.Closeable"]
+	}, 
+	{
+		"name" : "Closeable",
+		"id" : "java.io.Closeable",
+		"links" : ["java.lang.AutoCloseable"]
+	}, 
+	{
+		"name" : "Flushable",
+		"id" : "java.io.Flushable",
+		"links" : []
+	}, 
+	{
+		"name" : "IOException",
+		"id" : "java.io.IOException",
+		"links" : ["java.lang.Exception"]
+	}, 
+	{
+		"name" : "InputStream",
+		"id" : "java.io.InputStream",
+		"links" : ["java.io.Closeable"]
+	}, 
+	{
+		"name" : "InputStreamReader",
+		"id" : "java.io.InputStreamReader",
+		"links" : ["java.io.Reader"]
+	}, 
+	{
+		"name" : "Reader",
+		"id" : "java.io.Reader",
+		"links" : ["java.io.Closeable", "java.lang.Readable"]
+	}, 
+	{
+		"name" : "PrintWriter",
+		"id" : "java.io.PrintWriter",
+		"links" : ["java.io.Writer", "java.lang.String"]
+	}, 
+	{
+		"name" : "Writer",
+		"id" : "java.io.Writer",
+		"links" : ["java.io.Flushable", "java.io.Closeable", "java.lang.Appendable"]
+	}, 
+	{
+		"name" : "UnsupportedEncodingException",
+		"id" : "java.io.UnsupportedEncodingException",
+		"links" : ["java.io.IOException"]
+	}, 
+	{
+		"name" : "ByteArrayInputStream",
+		"id" : "java.io.ByteArrayInputStream",
+		"links" : ["java.io.InputStream"]
+	}, 
+	{
+		"name" : "ByteArrayOutputStream",
+		"id" : "java.io.ByteArrayOutputStream",
+		"links" : ["java.io.OutputStream"]
+	}, 
+	{
+		"name" : "File",
+		"id" : "java.io.File",
+		"links" : ["java.io.Serializable", "java.lang.Comparable"]
+	}, 
+	{
+		"name" : "FileInputStream",
+		"id" : "java.io.FileInputStream",
+		"links" : ["java.io.InputStream"]
+	}, 
+	{
+		"name" : "FileNotFoundException",
+		"id" : "java.io.FileNotFoundException",
+		"links" : ["java.io.IOException"]
+	}, 
+	{
+		"name" : "FileOutputStream",
+		"id" : "java.io.FileOutputStream",
+		"links" : ["java.io.OutputStream"]
+	}, 
+	{
+		"name" : "BufferedInputStream",
+		"id" : "java.io.BufferedInputStream",
+		"links" : ["java.io.FilterInputStream"]
+	}, 
+	{
+		"name" : "FilterInputStream",
+		"id" : "java.io.FilterInputStream",
+		"links" : ["java.io.InputStream"]
+	}, 
+	{
+		"name" : "BufferedOutputStream",
+		"id" : "java.io.BufferedOutputStream",
+		"links" : ["java.io.FilterOutputStream"]
+	}
+]

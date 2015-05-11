@@ -1,0 +1,10 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "BigInteger",
+			"id" : "java.math.BigInteger",
+			"values"" : [9135, 2, 0, 3, 1, 0, 8]
+		}
+	]
+}

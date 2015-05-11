@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="data" nsURI="http://hub.de/2015/VisualEMF/Data" nsPrefix="data">
+  <eClassifiers xsi:type="ecore:EClass" name="DataItem"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataSet" eSuperTypes="#//DataItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameAttribute" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="idAttribute" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//DataItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataTable" eSuperTypes="#//DataSet">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columnFeatures" upperBound="-1"
+        eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EStructuralFeature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataHierarchy" eSuperTypes="#//DataSet">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childrenReference" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataRelation" eSuperTypes="#//DataSet">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relationReference" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SizeTreeMapData" eSuperTypes="#//DataHierarchy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sizeAttribute" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EAttribute"/>
+  </eClassifiers>
+</ecore:EPackage>

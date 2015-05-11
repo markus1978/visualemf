@@ -1,0 +1,20 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "Notifier",
+			"id" : "org.eclipse.emf.common.notify.Notifier",
+			"values"" : [8969, 0, 0, 0, 0, 0, 0]
+		},
+		{
+			"name" : "NotificationChain",
+			"id" : "org.eclipse.emf.common.notify.NotificationChain",
+			"values"" : [8969, 0, 0, 0, 0, 0, 0]
+		},
+		{
+			"name" : "Notification",
+			"id" : "org.eclipse.emf.common.notify.Notification",
+			"values"" : [8971, 0, 0, 1, 6, 0, 20]
+		}
+	]
+}

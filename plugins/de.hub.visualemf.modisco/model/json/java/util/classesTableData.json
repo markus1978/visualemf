@@ -1,0 +1,120 @@
+{
+	"head" : [ wmc, dit, noc, cbo, nom, noam, size ],
+	"entries" : [
+		{
+			"name" : "Entry",
+			"id" : "java.util.Map.Entry",
+			"values"" : [9059, 0, 0, 1, 2, 0, 4]
+		},
+		{
+			"name" : "Map",
+			"id" : "java.util.Map",
+			"values"" : [9061, 0, 0, 1, 5, 0, 12]
+		},
+		{
+			"name" : "HashMap",
+			"id" : "java.util.HashMap",
+			"values"" : [9061, 2, 0, 4, 0, 10, 7]
+		},
+		{
+			"name" : "AbstractMap",
+			"id" : "java.util.AbstractMap",
+			"values"" : [9061, 1, 0, 1, 0, 5, 3]
+		},
+		{
+			"name" : "Comparator",
+			"id" : "java.util.Comparator",
+			"values"" : [9065, 0, 0, 1, 1, 0, 6]
+		},
+		{
+			"name" : "TreeMap",
+			"id" : "java.util.TreeMap",
+			"values"" : [9083, 3, 0, 6, 12, 12, 40]
+		},
+		{
+			"name" : "NavigableMap",
+			"id" : "java.util.NavigableMap",
+			"values"" : [9083, 2, 0, 1, 0, 7, 3]
+		},
+		{
+			"name" : "SortedMap",
+			"id" : "java.util.SortedMap",
+			"values"" : [9083, 1, 0, 1, 2, 5, 5]
+		},
+		{
+			"name" : "Set",
+			"id" : "java.util.Set",
+			"values"" : [9083, 2, 0, 1, 1, 2, 3]
+		},
+		{
+			"name" : "Collection",
+			"id" : "java.util.Collection",
+			"values"" : [9085, 1, 0, 2, 2, 0, 6]
+		},
+		{
+			"name" : "Iterator",
+			"id" : "java.util.Iterator",
+			"values"" : [9085, 0, 0, 0, 2, 0, 3]
+		},
+		{
+			"name" : "List",
+			"id" : "java.util.List",
+			"values"" : [9129, 2, 0, 2, 25, 2, 71]
+		},
+		{
+			"name" : "ListIterator",
+			"id" : "java.util.ListIterator",
+			"values"" : [9129, 1, 0, 1, 0, 2, 2]
+		},
+		{
+			"name" : "ArrayList",
+			"id" : "java.util.ArrayList",
+			"values"" : [9129, 4, 0, 5, 0, 56, 10]
+		},
+		{
+			"name" : "AbstractList",
+			"id" : "java.util.AbstractList",
+			"values"" : [9129, 3, 0, 2, 0, 29, 3]
+		},
+		{
+			"name" : "AbstractCollection",
+			"id" : "java.util.AbstractCollection",
+			"values"" : [9129, 2, 0, 1, 0, 2, 2]
+		},
+		{
+			"name" : "RandomAccess",
+			"id" : "java.util.RandomAccess",
+			"values"" : [9129, 0, 0, 0, 0, 0, 0]
+		},
+		{
+			"name" : "Stack",
+			"id" : "java.util.Stack",
+			"values"" : [9131, 5, 0, 2, 3, 57, 8]
+		},
+		{
+			"name" : "Vector",
+			"id" : "java.util.Vector",
+			"values"" : [9131, 4, 0, 5, 1, 56, 7]
+		},
+		{
+			"name" : "LinkedList",
+			"id" : "java.util.LinkedList",
+			"values"" : [9131, 5, 0, 5, 0, 60, 7]
+		},
+		{
+			"name" : "AbstractSequentialList",
+			"id" : "java.util.AbstractSequentialList",
+			"values"" : [9131, 4, 0, 1, 0, 29, 2]
+		},
+		{
+			"name" : "Deque",
+			"id" : "java.util.Deque",
+			"values"" : [9131, 3, 0, 1, 0, 4, 2]
+		},
+		{
+			"name" : "Queue",
+			"id" : "java.util.Queue",
+			"values"" : [9133, 2, 0, 2, 2, 2, 6]
+		}
+	]
+}
