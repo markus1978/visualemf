@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="xtend-gen"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" output="test-classes" path="test"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
@@ -7,5 +8,6 @@
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=de.hub.visualemf.gwt.examples&amp;ivyXmlPath=ivy.xml&amp;confs=*"/>
 	<classpathentry kind="lib" path="libs/gwt-d3-api-1.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/gwt-d3-js-3.5.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

@@ -44,7 +44,7 @@ public class ChordDiagram extends FlowPanel {
 		final MyResources css = Bundle.INSTANCE.css();
 
 		// From http://mkweb.bcgsc.ca/circos/guide/tables/
-		JsArray<JsArrayNumber> matrix = matrix();
+		JsArray<JsArrayNumber> matrix = null; // matrix();
 
 		Chord chord = D3.layout().chord().padding(.05)
 				.sortSubgroups(Arrays.descending()).matrix(matrix);

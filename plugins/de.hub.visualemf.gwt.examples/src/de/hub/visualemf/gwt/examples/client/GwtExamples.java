@@ -6,7 +6,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 public class GwtExamples implements EntryPoint {
 
 	public void onModuleLoad() {
-		ChordDiagram chordDiagram = new ChordDiagram();
+		ChordDiagram2 chordDiagram = new ChordDiagram2();
 		RootPanel.get().add(chordDiagram);
 		chordDiagram.render();
 	}
