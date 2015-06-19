@@ -19,6 +19,7 @@ import com.google.gwt.core.client.JsArrayNumber;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.resources.client.ClientBundle.Source;
 import com.google.gwt.user.client.ui.FlowPanel;
 
 public class ChordDiagram extends FlowPanel {
@@ -39,12 +40,13 @@ public class ChordDiagram extends FlowPanel {
 		Bundle.INSTANCE.css().ensureInjected();
 	}
 
+
 	public void render() {
 
 		final MyResources css = Bundle.INSTANCE.css();
 
 		// From http://mkweb.bcgsc.ca/circos/guide/tables/
-		JsArray<JsArrayNumber> matrix = null; // matrix();
+		JsArray<JsArrayNumber> matrix = matrix();
 
 		Chord chord = D3.layout().chord().padding(.05)
 				.sortSubgroups(Arrays.descending()).matrix(matrix);

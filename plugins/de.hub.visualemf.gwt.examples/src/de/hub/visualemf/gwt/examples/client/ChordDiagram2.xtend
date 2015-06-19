@@ -37,7 +37,7 @@ class ChordDiagram2 extends FlowPanel {
 
 	def render() {
 		val css = Bundle.INSTANCE.ChordDiagramStyles();
-		val matrix = null; matrix();
+		val matrix = matrix();
 
 		val chord = D3.layout().chord().padding(0.05)
 				.sortSubgroups(Arrays.descending())

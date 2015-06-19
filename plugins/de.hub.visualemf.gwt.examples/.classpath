@@ -6,8 +6,8 @@
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=de.hub.visualemf.gwt.examples&amp;ivyXmlPath=ivy.xml&amp;confs=*"/>
-	<classpathentry kind="lib" path="libs/gwt-d3-api-1.1.1.jar"/>
-	<classpathentry kind="lib" path="libs/gwt-d3-js-3.5.3.jar"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="lib" path="libs/gwt-d3-js-3.5.3.jar"/>
+	<classpathentry kind="lib" path="libs/gwt-d3-api-1.1.1.jar" sourcepath="/Users/markus/.m2/repository/com/github/gwtd3/gwt-d3-api/1.1.1/gwt-d3-api-1.1.1-sources.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
