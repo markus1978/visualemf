@@ -1,8 +1,5 @@
 package de.hub.visualemf.gwt.examples.client
 
-import com.google.gwt.resources.client.ClientBundle
-import com.google.gwt.core.client.GWT
-import com.google.gwt.resources.client.CssResource
 import com.github.gwtd3.api.D3
 import com.github.gwtd3.api.Arrays
 import com.github.gwtd3.api.arrays.Array
@@ -12,32 +9,19 @@ import com.google.gwt.dom.client.Element
 import com.github.gwtd3.api.core.Value
 import com.github.gwtd3.api.layout.Chord
 import com.github.gwtd3.api.core.Selection
-import com.google.gwt.core.client.JsArray
-import com.google.gwt.core.client.JsArrayNumber
-import com.google.gwt.core.client.JavaScriptObject
 import com.github.gwtd3.api.layout.Chord.ChordItem
-import de.itemis.xtend.auto.gwt.JsNative
+import de.hub.visualemf.gwt.examples.client.ChordDiagramHelper.MyResources
+import de.hub.visualemf.gwt.examples.client.ChordDiagramHelper.GroupTick
 
-class ChordDiagram2 extends FlowPanel {
-	
-	public interface Bundle extends ClientBundle {
-		public static final Bundle INSTANCE = GWT.create(typeof(Bundle));
-
-		//@Source("ChordDiagramStyles.css")
-		def MyResources ChordDiagramStyles();
-	}
-
-	interface MyResources extends CssResource {
-		def String chord();
-	}
+class ChordDiagram extends FlowPanel {
 
 	new() {
-		Bundle.INSTANCE.ChordDiagramStyles().ensureInjected();
+		ChordDiagramHelper.Bundle.INSTANCE.css().ensureInjected();
 	}
 
 	def render() {
-		val css = Bundle.INSTANCE.ChordDiagramStyles();
-		val matrix = matrix();
+		val css = ChordDiagramHelper.Bundle.INSTANCE.css();
+		val matrix = ChordDiagramHelper.matrix();
 
 		val chord = D3.layout().chord().padding(0.05)
 				.sortSubgroups(Arrays.descending())
@@ -125,14 +109,7 @@ class ChordDiagram2 extends FlowPanel {
 
 	}
 
-	@JsNative def private static JsArray<JsArrayNumber> matrix() '''
-		return [ [ 11975, 5871, 8916, 2868 ], [ 1951, 10048, 2060, 6171 ],
-				[ 8010, 16145, 8090, 8045 ], [ 1013, 990, 940, 6907 ] ];
-	'''
 
-	@JsNative def static String call(JavaScriptObject f) '''
-		f();
-	'''
 
 	def DatumFunction<Void> fade(MyResources css, Selection svg, double opacity) {
 		return [Element context, Value d, int i |
@@ -145,24 +122,5 @@ class ChordDiagram2 extends FlowPanel {
 				.style("opacity", opacity);
 				return null;
 		];
-	}
-
-	private static class GroupTick extends JavaScriptObject {
-		protected new() {}
-
-		@JsNative def public static GroupTick create(double angle, String label) '''
-			return {
-				angle : angle,
-				label : label
-			};
-		'''
-
-		@JsNative def double angle() '''
-			return this.angle;
-		'''
-
-		@JsNative def String label() '''
-			return this.label;
-		'''
 	}
 }

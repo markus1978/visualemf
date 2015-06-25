@@ -11,16 +11,13 @@ public class GwtExamples implements EntryPoint {
 		final Label versionLabel = new Label("d3.js current version: " + D3.version());
 		RootPanel.get().add(versionLabel);
 		
-//		ArcTween arcTween = new ArcTween();
-//		RootPanel.get().add(arcTween);
-//		arcTween.start();
-		
 		ChordDiagram chordDiagram = new ChordDiagram();
-		RootPanel.get("TEST").add(chordDiagram);
+		RootPanel.get("ChordDiagram").add(chordDiagram);
 		chordDiagram.render();
 		
-//		BarChart barChart = new BarChart();
-//		RootPanel.get().add(barChart);
-//		barChart.render();
+		ParallelCoordinates parallelCoordinates = new ParallelCoordinates();
+		RootPanel.get("ParallelCoordinates").add(parallelCoordinates);
+		parallelCoordinates.render();
+		
 	}
 }
