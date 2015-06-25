@@ -3,18 +3,21 @@ svg {
 }
 
 .foreground path {
+  stroke-width: 1px;
   fill: none;
-  stroke-opacity: .5;
-  stroke-width: 1.5px;
+}
+
+.notselected {
+  stroke-opacity: .4;
   stroke: #444;
 }
 
-.foreground path.fade {
-  stroke: #000;
-  stroke-opacity: .05;
+.selected {
+  stroke-opacity: 1;
+  stroke: #F00;
 }
 
-.brush .extent {
+.brush {
   fill-opacity: .3;
   stroke: #fff;
   shape-rendering: crispEdges;
