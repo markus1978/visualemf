@@ -19,5 +19,12 @@ public class GwtExamples implements EntryPoint {
 		RootPanel.get("ParallelCoordinates").add(parallelCoordinates);
 		parallelCoordinates.render();
 		
+		TreeMap treeMap = new TreeMap();
+		RootPanel.get("TreeMap").add(treeMap);
+		treeMap.render();
+		
+		Sunburst sunburst = new Sunburst();
+		RootPanel.get("Sunburst").add(sunburst);
+		sunburst.render();
 	}
 }
