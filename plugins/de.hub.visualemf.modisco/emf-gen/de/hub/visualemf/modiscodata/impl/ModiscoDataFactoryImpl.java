@@ -58,7 +58,6 @@ public class ModiscoDataFactoryImpl extends EFactoryImpl implements ModiscoDataF
 		switch (eClass.getClassifierID()) {
 			case ModiscoDataPackage.CLASS_METRICS_ITEM: return createClassMetricsItem();
 			case ModiscoDataPackage.CONTAINMENT_ITEM: return createContainmentItem();
-			case ModiscoDataPackage.DECLARATION_CONTAINMENT_ITEM: return createDeclarationContainmentItem();
 			case ModiscoDataPackage.PACKAGE_DEPENDENCY_ITEM: return createPackageDependencyItem();
 			case ModiscoDataPackage.CLASS_DEPENDENCY_ITEM: return createClassDependencyItem();
 			case ModiscoDataPackage.MO_DISCO_DATA_ITEM: return createMoDiscoDataItem();
@@ -85,16 +84,6 @@ public class ModiscoDataFactoryImpl extends EFactoryImpl implements ModiscoDataF
 	public ContainmentItem createContainmentItem() {
 		ContainmentItemImpl containmentItem = new ContainmentItemImpl();
 		return containmentItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DeclarationContainmentItem createDeclarationContainmentItem() {
-		DeclarationContainmentItemImpl declarationContainmentItem = new DeclarationContainmentItemImpl();
-		return declarationContainmentItem;
 	}
 
 	/**

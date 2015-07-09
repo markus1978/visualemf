@@ -13,6 +13,7 @@ package de.hub.visualemf.modiscodata;
  * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getWmc <em>Wmc</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getWmc_cc <em>Wmc cc</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getDit <em>Dit</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getNoc <em>Noc</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getCbo <em>Cbo</em>}</li>
@@ -51,6 +52,32 @@ public interface ClassMetricsItem extends MoDiscoDataItem {
 	 * @generated
 	 */
 	void setWmc(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Wmc cc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Wmc cc</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Wmc cc</em>' attribute.
+	 * @see #setWmc_cc(int)
+	 * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getClassMetricsItem_Wmc_cc()
+	 * @model
+	 * @generated
+	 */
+	int getWmc_cc();
+
+	/**
+	 * Sets the value of the '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getWmc_cc <em>Wmc cc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Wmc cc</em>' attribute.
+	 * @see #getWmc_cc()
+	 * @generated
+	 */
+	void setWmc_cc(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Dit</b></em>' attribute.

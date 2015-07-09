@@ -7,10 +7,12 @@ import de.hub.visualemf.modiscodata.ModiscoDataPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -23,6 +25,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ContainmentItemImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.impl.ContainmentItemImpl#getSize <em>Size</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,6 +40,25 @@ public class ContainmentItemImpl extends MoDiscoDataItemImpl implements Containm
 	 * @ordered
 	 */
 	protected EList<ContainmentItem> children;
+
+	/**
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SIZE_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected int size = SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,6 +96,27 @@ public class ContainmentItemImpl extends MoDiscoDataItemImpl implements Containm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getSize() {
+		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSize(int newSize) {
+		int oldSize = size;
+		size = newSize;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModiscoDataPackage.CONTAINMENT_ITEM__SIZE, oldSize, size));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -93,6 +136,8 @@ public class ContainmentItemImpl extends MoDiscoDataItemImpl implements Containm
 		switch (featureID) {
 			case ModiscoDataPackage.CONTAINMENT_ITEM__CHILDREN:
 				return getChildren();
+			case ModiscoDataPackage.CONTAINMENT_ITEM__SIZE:
+				return getSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +155,9 @@ public class ContainmentItemImpl extends MoDiscoDataItemImpl implements Containm
 				getChildren().clear();
 				getChildren().addAll((Collection<? extends ContainmentItem>)newValue);
 				return;
+			case ModiscoDataPackage.CONTAINMENT_ITEM__SIZE:
+				setSize((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -125,6 +173,9 @@ public class ContainmentItemImpl extends MoDiscoDataItemImpl implements Containm
 			case ModiscoDataPackage.CONTAINMENT_ITEM__CHILDREN:
 				getChildren().clear();
 				return;
+			case ModiscoDataPackage.CONTAINMENT_ITEM__SIZE:
+				setSize(SIZE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -139,11 +190,29 @@ public class ContainmentItemImpl extends MoDiscoDataItemImpl implements Containm
 		switch (featureID) {
 			case ModiscoDataPackage.CONTAINMENT_ITEM__CHILDREN:
 				return children != null && !children.isEmpty();
+			case ModiscoDataPackage.CONTAINMENT_ITEM__SIZE:
+				return size != SIZE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
 	
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (size: ");
+		result.append(size);
+		result.append(')');
+		return result.toString();
+	}
+
 	@Override
 	public String getName() {
 		return getRepresentedElement().eClass().getName();

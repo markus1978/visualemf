@@ -78,10 +78,6 @@ public class ModiscoDataAdapterFactory extends AdapterFactoryImpl {
 				return createContainmentItemAdapter();
 			}
 			@Override
-			public Adapter caseDeclarationContainmentItem(DeclarationContainmentItem object) {
-				return createDeclarationContainmentItemAdapter();
-			}
-			@Override
 			public Adapter casePackageDependencyItem(PackageDependencyItem object) {
 				return createPackageDependencyItemAdapter();
 			}
@@ -142,20 +138,6 @@ public class ModiscoDataAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createContainmentItemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.hub.visualemf.modiscodata.DeclarationContainmentItem <em>Declaration Containment Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.hub.visualemf.modiscodata.DeclarationContainmentItem
-	 * @generated
-	 */
-	public Adapter createDeclarationContainmentItemAdapter() {
 		return null;
 	}
 

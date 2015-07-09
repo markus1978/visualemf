@@ -6,7 +6,6 @@ import de.hub.visualemf.data.DataPackage;
 import de.hub.visualemf.modiscodata.ClassDependencyItem;
 import de.hub.visualemf.modiscodata.ClassMetricsItem;
 import de.hub.visualemf.modiscodata.ContainmentItem;
-import de.hub.visualemf.modiscodata.DeclarationContainmentItem;
 import de.hub.visualemf.modiscodata.MoDiscoDataItem;
 import de.hub.visualemf.modiscodata.ModiscoDataFactory;
 import de.hub.visualemf.modiscodata.ModiscoDataPackage;
@@ -38,13 +37,6 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * @generated
 	 */
 	private EClass containmentItemEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass declarationContainmentItemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,7 +146,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassMetricsItem_Dit() {
+	public EAttribute getClassMetricsItem_Wmc_cc() {
 		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -163,7 +155,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassMetricsItem_Noc() {
+	public EAttribute getClassMetricsItem_Dit() {
 		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -172,7 +164,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassMetricsItem_Cbo() {
+	public EAttribute getClassMetricsItem_Noc() {
 		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -181,7 +173,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassMetricsItem_Rfc() {
+	public EAttribute getClassMetricsItem_Cbo() {
 		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -190,7 +182,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassMetricsItem_Lcom() {
+	public EAttribute getClassMetricsItem_Rfc() {
 		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -199,8 +191,17 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassMetricsItem_Size() {
+	public EAttribute getClassMetricsItem_Lcom() {
 		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClassMetricsItem_Size() {
+		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -226,26 +227,8 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDeclarationContainmentItem() {
-		return declarationContainmentItemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDeclarationContainmentItem_Children() {
-		return (EReference)declarationContainmentItemEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDeclarationContainmentItem_Size() {
-		return (EAttribute)declarationContainmentItemEClass.getEStructuralFeatures().get(1);
+	public EAttribute getContainmentItem_Size() {
+		return (EAttribute)containmentItemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -350,6 +333,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 		// Create classes and their features
 		classMetricsItemEClass = createEClass(CLASS_METRICS_ITEM);
 		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__WMC);
+		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__WMC_CC);
 		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__DIT);
 		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__NOC);
 		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__CBO);
@@ -359,10 +343,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 
 		containmentItemEClass = createEClass(CONTAINMENT_ITEM);
 		createEReference(containmentItemEClass, CONTAINMENT_ITEM__CHILDREN);
-
-		declarationContainmentItemEClass = createEClass(DECLARATION_CONTAINMENT_ITEM);
-		createEReference(declarationContainmentItemEClass, DECLARATION_CONTAINMENT_ITEM__CHILDREN);
-		createEAttribute(declarationContainmentItemEClass, DECLARATION_CONTAINMENT_ITEM__SIZE);
+		createEAttribute(containmentItemEClass, CONTAINMENT_ITEM__SIZE);
 
 		packageDependencyItemEClass = createEClass(PACKAGE_DEPENDENCY_ITEM);
 		createEReference(packageDependencyItemEClass, PACKAGE_DEPENDENCY_ITEM__DEPENDENCIES);
@@ -410,7 +391,6 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 		// Add supertypes to classes
 		classMetricsItemEClass.getESuperTypes().add(this.getMoDiscoDataItem());
 		containmentItemEClass.getESuperTypes().add(this.getMoDiscoDataItem());
-		declarationContainmentItemEClass.getESuperTypes().add(this.getMoDiscoDataItem());
 		packageDependencyItemEClass.getESuperTypes().add(this.getMoDiscoDataItem());
 		classDependencyItemEClass.getESuperTypes().add(this.getMoDiscoDataItem());
 		moDiscoDataItemEClass.getESuperTypes().add(theDataPackage.getDataItem());
@@ -418,6 +398,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 		// Initialize classes, features, and operations; add parameters
 		initEClass(classMetricsItemEClass, ClassMetricsItem.class, "ClassMetricsItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getClassMetricsItem_Wmc(), theEcorePackage.getEInt(), "wmc", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClassMetricsItem_Wmc_cc(), theEcorePackage.getEInt(), "wmc_cc", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassMetricsItem_Dit(), theEcorePackage.getEInt(), "dit", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassMetricsItem_Noc(), theEcorePackage.getEInt(), "noc", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassMetricsItem_Cbo(), theEcorePackage.getEInt(), "cbo", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -427,10 +408,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 
 		initEClass(containmentItemEClass, ContainmentItem.class, "ContainmentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContainmentItem_Children(), this.getContainmentItem(), null, "children", null, 0, -1, ContainmentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(declarationContainmentItemEClass, DeclarationContainmentItem.class, "DeclarationContainmentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeclarationContainmentItem_Children(), this.getDeclarationContainmentItem(), null, "children", null, 0, -1, DeclarationContainmentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDeclarationContainmentItem_Size(), theEcorePackage.getEInt(), "size", null, 0, 1, DeclarationContainmentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContainmentItem_Size(), theEcorePackage.getEInt(), "size", null, 0, 1, ContainmentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(packageDependencyItemEClass, PackageDependencyItem.class, "PackageDependencyItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPackageDependencyItem_Dependencies(), this.getMoDiscoDataItem(), null, "dependencies", null, 0, -1, PackageDependencyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

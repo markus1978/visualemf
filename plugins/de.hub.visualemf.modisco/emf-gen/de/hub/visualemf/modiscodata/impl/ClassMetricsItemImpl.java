@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getWmc <em>Wmc</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getWmc_cc <em>Wmc cc</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getDit <em>Dit</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getNoc <em>Noc</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getCbo <em>Cbo</em>}</li>
@@ -50,6 +51,26 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 	 * @ordered
 	 */
 	protected int wmc = WMC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWmc_cc() <em>Wmc cc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWmc_cc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int WMC_CC_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getWmc_cc() <em>Wmc cc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWmc_cc()
+	 * @generated
+	 * @ordered
+	 */
+	protected int wmc_cc = WMC_CC_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDit() <em>Dit</em>}' attribute.
@@ -216,6 +237,27 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getWmc_cc() {
+		return wmc_cc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWmc_cc(int newWmc_cc) {
+		int oldWmc_cc = wmc_cc;
+		wmc_cc = newWmc_cc;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModiscoDataPackage.CLASS_METRICS_ITEM__WMC_CC, oldWmc_cc, wmc_cc));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getDit() {
 		return dit;
 	}
@@ -347,6 +389,8 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 		switch (featureID) {
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__WMC:
 				return getWmc();
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__WMC_CC:
+				return getWmc_cc();
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__DIT:
 				return getDit();
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOC:
@@ -373,6 +417,9 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 		switch (featureID) {
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__WMC:
 				setWmc((Integer)newValue);
+				return;
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__WMC_CC:
+				setWmc_cc((Integer)newValue);
 				return;
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__DIT:
 				setDit((Integer)newValue);
@@ -407,6 +454,9 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__WMC:
 				setWmc(WMC_EDEFAULT);
 				return;
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__WMC_CC:
+				setWmc_cc(WMC_CC_EDEFAULT);
+				return;
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__DIT:
 				setDit(DIT_EDEFAULT);
 				return;
@@ -439,6 +489,8 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 		switch (featureID) {
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__WMC:
 				return wmc != WMC_EDEFAULT;
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__WMC_CC:
+				return wmc_cc != WMC_CC_EDEFAULT;
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__DIT:
 				return dit != DIT_EDEFAULT;
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOC:
@@ -467,6 +519,8 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (wmc: ");
 		result.append(wmc);
+		result.append(", wmc_cc: ");
+		result.append(wmc_cc);
 		result.append(", dit: ");
 		result.append(dit);
 		result.append(", noc: ");

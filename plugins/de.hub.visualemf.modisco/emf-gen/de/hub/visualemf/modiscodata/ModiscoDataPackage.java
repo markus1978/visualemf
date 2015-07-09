@@ -66,7 +66,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @see de.hub.visualemf.modiscodata.impl.ModiscoDataPackageImpl#getMoDiscoDataItem()
 	 * @generated
 	 */
-	int MO_DISCO_DATA_ITEM = 5;
+	int MO_DISCO_DATA_ITEM = 4;
 
 	/**
 	 * The feature id for the '<em><b>Represented Element</b></em>' reference.
@@ -160,13 +160,22 @@ public interface ModiscoDataPackage extends EPackage {
 	int CLASS_METRICS_ITEM__WMC = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Wmc cc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_METRICS_ITEM__WMC_CC = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Dit</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM__DIT = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 1;
+	int CLASS_METRICS_ITEM__DIT = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Noc</b></em>' attribute.
@@ -175,7 +184,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM__NOC = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 2;
+	int CLASS_METRICS_ITEM__NOC = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Cbo</b></em>' attribute.
@@ -184,7 +193,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM__CBO = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 3;
+	int CLASS_METRICS_ITEM__CBO = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Rfc</b></em>' attribute.
@@ -193,7 +202,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM__RFC = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 4;
+	int CLASS_METRICS_ITEM__RFC = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Lcom</b></em>' attribute.
@@ -202,7 +211,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM__LCOM = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 5;
+	int CLASS_METRICS_ITEM__LCOM = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -211,7 +220,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM__SIZE = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 6;
+	int CLASS_METRICS_ITEM__SIZE = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Class Metrics Item</em>' class.
@@ -220,7 +229,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM_FEATURE_COUNT = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 7;
+	int CLASS_METRICS_ITEM_FEATURE_COUNT = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Class Metrics Item</em>' class.
@@ -278,13 +287,22 @@ public interface ModiscoDataPackage extends EPackage {
 	int CONTAINMENT_ITEM__CHILDREN = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINMENT_ITEM__SIZE = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Containment Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINMENT_ITEM_FEATURE_COUNT = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 1;
+	int CONTAINMENT_ITEM_FEATURE_COUNT = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Containment Item</em>' class.
@@ -296,79 +314,6 @@ public interface ModiscoDataPackage extends EPackage {
 	int CONTAINMENT_ITEM_OPERATION_COUNT = MO_DISCO_DATA_ITEM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.hub.visualemf.modiscodata.impl.DeclarationContainmentItemImpl <em>Declaration Containment Item</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.hub.visualemf.modiscodata.impl.DeclarationContainmentItemImpl
-	 * @see de.hub.visualemf.modiscodata.impl.ModiscoDataPackageImpl#getDeclarationContainmentItem()
-	 * @generated
-	 */
-	int DECLARATION_CONTAINMENT_ITEM = 2;
-
-	/**
-	 * The feature id for the '<em><b>Represented Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECLARATION_CONTAINMENT_ITEM__REPRESENTED_ELEMENT = MO_DISCO_DATA_ITEM__REPRESENTED_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECLARATION_CONTAINMENT_ITEM__NAME = MO_DISCO_DATA_ITEM__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECLARATION_CONTAINMENT_ITEM__ID = MO_DISCO_DATA_ITEM__ID;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECLARATION_CONTAINMENT_ITEM__CHILDREN = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECLARATION_CONTAINMENT_ITEM__SIZE = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Declaration Containment Item</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECLARATION_CONTAINMENT_ITEM_FEATURE_COUNT = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Declaration Containment Item</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECLARATION_CONTAINMENT_ITEM_OPERATION_COUNT = MO_DISCO_DATA_ITEM_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.hub.visualemf.modiscodata.impl.PackageDependencyItemImpl <em>Package Dependency Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -376,7 +321,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @see de.hub.visualemf.modiscodata.impl.ModiscoDataPackageImpl#getPackageDependencyItem()
 	 * @generated
 	 */
-	int PACKAGE_DEPENDENCY_ITEM = 3;
+	int PACKAGE_DEPENDENCY_ITEM = 2;
 
 	/**
 	 * The feature id for the '<em><b>Represented Element</b></em>' reference.
@@ -440,7 +385,7 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @see de.hub.visualemf.modiscodata.impl.ModiscoDataPackageImpl#getClassDependencyItem()
 	 * @generated
 	 */
-	int CLASS_DEPENDENCY_ITEM = 4;
+	int CLASS_DEPENDENCY_ITEM = 3;
 
 	/**
 	 * The feature id for the '<em><b>Represented Element</b></em>' reference.
@@ -517,6 +462,17 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getClassMetricsItem_Wmc();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getWmc_cc <em>Wmc cc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wmc cc</em>'.
+	 * @see de.hub.visualemf.modiscodata.ClassMetricsItem#getWmc_cc()
+	 * @see #getClassMetricsItem()
+	 * @generated
+	 */
+	EAttribute getClassMetricsItem_Wmc_cc();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getDit <em>Dit</em>}'.
@@ -606,36 +562,15 @@ public interface ModiscoDataPackage extends EPackage {
 	EReference getContainmentItem_Children();
 
 	/**
-	 * Returns the meta object for class '{@link de.hub.visualemf.modiscodata.DeclarationContainmentItem <em>Declaration Containment Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Declaration Containment Item</em>'.
-	 * @see de.hub.visualemf.modiscodata.DeclarationContainmentItem
-	 * @generated
-	 */
-	EClass getDeclarationContainmentItem();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.hub.visualemf.modiscodata.DeclarationContainmentItem#getChildren <em>Children</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
-	 * @see de.hub.visualemf.modiscodata.DeclarationContainmentItem#getChildren()
-	 * @see #getDeclarationContainmentItem()
-	 * @generated
-	 */
-	EReference getDeclarationContainmentItem_Children();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.DeclarationContainmentItem#getSize <em>Size</em>}'.
+	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.ContainmentItem#getSize <em>Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see de.hub.visualemf.modiscodata.DeclarationContainmentItem#getSize()
-	 * @see #getDeclarationContainmentItem()
+	 * @see de.hub.visualemf.modiscodata.ContainmentItem#getSize()
+	 * @see #getContainmentItem()
 	 * @generated
 	 */
-	EAttribute getDeclarationContainmentItem_Size();
+	EAttribute getContainmentItem_Size();
 
 	/**
 	 * Returns the meta object for class '{@link de.hub.visualemf.modiscodata.PackageDependencyItem <em>Package Dependency Item</em>}'.
@@ -764,6 +699,14 @@ public interface ModiscoDataPackage extends EPackage {
 		EAttribute CLASS_METRICS_ITEM__WMC = eINSTANCE.getClassMetricsItem_Wmc();
 
 		/**
+		 * The meta object literal for the '<em><b>Wmc cc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS_METRICS_ITEM__WMC_CC = eINSTANCE.getClassMetricsItem_Wmc_cc();
+
+		/**
 		 * The meta object literal for the '<em><b>Dit</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -830,30 +773,12 @@ public interface ModiscoDataPackage extends EPackage {
 		EReference CONTAINMENT_ITEM__CHILDREN = eINSTANCE.getContainmentItem_Children();
 
 		/**
-		 * The meta object literal for the '{@link de.hub.visualemf.modiscodata.impl.DeclarationContainmentItemImpl <em>Declaration Containment Item</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.hub.visualemf.modiscodata.impl.DeclarationContainmentItemImpl
-		 * @see de.hub.visualemf.modiscodata.impl.ModiscoDataPackageImpl#getDeclarationContainmentItem()
-		 * @generated
-		 */
-		EClass DECLARATION_CONTAINMENT_ITEM = eINSTANCE.getDeclarationContainmentItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DECLARATION_CONTAINMENT_ITEM__CHILDREN = eINSTANCE.getDeclarationContainmentItem_Children();
-
-		/**
 		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DECLARATION_CONTAINMENT_ITEM__SIZE = eINSTANCE.getDeclarationContainmentItem_Size();
+		EAttribute CONTAINMENT_ITEM__SIZE = eINSTANCE.getContainmentItem_Size();
 
 		/**
 		 * The meta object literal for the '{@link de.hub.visualemf.modiscodata.impl.PackageDependencyItemImpl <em>Package Dependency Item</em>}' class.

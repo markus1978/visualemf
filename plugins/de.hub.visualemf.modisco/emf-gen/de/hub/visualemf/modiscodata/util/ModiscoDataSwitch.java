@@ -84,14 +84,6 @@ public class ModiscoDataSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModiscoDataPackage.DECLARATION_CONTAINMENT_ITEM: {
-				DeclarationContainmentItem declarationContainmentItem = (DeclarationContainmentItem)theEObject;
-				T result = caseDeclarationContainmentItem(declarationContainmentItem);
-				if (result == null) result = caseMoDiscoDataItem(declarationContainmentItem);
-				if (result == null) result = caseDataItem(declarationContainmentItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ModiscoDataPackage.PACKAGE_DEPENDENCY_ITEM: {
 				PackageDependencyItem packageDependencyItem = (PackageDependencyItem)theEObject;
 				T result = casePackageDependencyItem(packageDependencyItem);
@@ -146,21 +138,6 @@ public class ModiscoDataSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseContainmentItem(ContainmentItem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Declaration Containment Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Declaration Containment Item</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDeclarationContainmentItem(DeclarationContainmentItem object) {
 		return null;
 	}
 

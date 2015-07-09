@@ -1,6 +1,8 @@
 *.class
 *.xtendbin
 *._trace
+xtend-gen/
+.DS_Store
 
 bin/
 

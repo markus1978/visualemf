@@ -40,15 +40,6 @@ public interface ModiscoDataFactory extends EFactory {
 	ContainmentItem createContainmentItem();
 
 	/**
-	 * Returns a new object of class '<em>Declaration Containment Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Declaration Containment Item</em>'.
-	 * @generated
-	 */
-	DeclarationContainmentItem createDeclarationContainmentItem();
-
-	/**
 	 * Returns a new object of class '<em>Package Dependency Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

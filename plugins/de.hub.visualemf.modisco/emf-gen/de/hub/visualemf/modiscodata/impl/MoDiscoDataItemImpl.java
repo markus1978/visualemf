@@ -4,10 +4,8 @@ package de.hub.visualemf.modiscodata.impl;
 
 import de.hub.srcrepo.metrics.ModiscoMetrics;
 import de.hub.visualemf.data.impl.DataItemImpl;
-import de.hub.visualemf.modisco.ModiscoToData;
 import de.hub.visualemf.modiscodata.MoDiscoDataItem;
 import de.hub.visualemf.modiscodata.ModiscoDataPackage;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
