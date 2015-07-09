@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration
 import org.eclipse.gmt.modisco.java.AbstractMethodInvocation
 import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration
+import org.eclipse.gmt.modisco.java.Block
 import org.eclipse.gmt.modisco.java.Model
 import org.eclipse.gmt.modisco.java.Package
 import org.eclipse.gmt.modisco.java.emf.JavaPackage
@@ -44,36 +45,39 @@ class ModiscoToData {
 		instance.run(new File("output/jdt"), new File("model/jdt.xml"))		
 	}
 	
-	def run(File outputDirectory, File modelFile) {				
+	def run(File outputDirectory, File modelFile) {								
 		val rs = new ResourceSetImpl
 		val r = rs.getResource(URI.createFileURI(modelFile.path), true)
 		val model = r.contents.get(0) as Model
 		
-		// directory data
-		val directoryData = DataSetMetaDataGenerator.autoGenSizeTreeDataSet(ModiscoDataPackage.eINSTANCE.declarationContainmentItem)
-		val directoryMap = new HashMap<EObject, DeclarationContainmentItem>
-		model.eAllContentsAsIterable[
-				(
-					it instanceof Package &&
-					(it as Package).ownedElements.exists[it.originalCompilationUnit != null && it instanceof AbstractTypeDeclaration]
-				) || it instanceof AbstractTypeDeclaration
-			].forEach[element|
-			val node = ModiscoDataFactory::eINSTANCE.createDeclarationContainmentItem
-			directoryMap.put(element, node)
-			node.representedElement = element
-			val parent = directoryMap.get(element.eContainer)
-			if (parent != null) {
-				parent.children.add(node)
-			} else {
-				directoryData.items.add(node)
-			}
-		]
-		DataSetSerialization.write(new File(outputDirectory.path + "/directory.json"), directoryData)
+		println("Model loaded")
 		
 		val executorService = Executors.newFixedThreadPool(10)
+		
+		// directory data
+		executorService.submit[
+			println("+ processing directroy")
+			val directoryData = DataSetMetaDataGenerator.autoGenSizeTreeDataSet(ModiscoDataPackage.eINSTANCE.declarationContainmentItem)
+			val directoryMap = new HashMap<EObject, DeclarationContainmentItem>
+			model.eAllContentsAsIterable[it instanceof Package].forEach[element|
+				val node = ModiscoDataFactory::eINSTANCE.createDeclarationContainmentItem
+				directoryMap.put(element, node)
+				node.representedElement = element
+				val parent = directoryMap.get(element.eContainer)
+				if (parent != null) {
+					parent.children.add(node)
+				} else {
+					directoryData.items.add(node)
+				}
+			]
+			DataSetSerialization.write(new File(outputDirectory.path + "/directory.json"), directoryData)
+			println("- processing directroy")
+		]
+		
 		val packages = model.ownedElements.closure[it.ownedPackages].filter[ownedElements.exists[it.originalCompilationUnit != null && it instanceof AbstractTypeDeclaration]]
 		packages.forEach[pkg|
 			executorService.submit[
+				println("+ processing " + pkg.qualifiedName)
 				val classes = pkg.ownedElements.typeSelect(typeof(AbstractTypeDeclaration)) 
 				// metrics data
 				val metricsData = DataSetMetaDataGenerator.autoGenTableDataSet(ModiscoDataPackage.eINSTANCE.classMetricsItem)
@@ -115,7 +119,7 @@ class ModiscoToData {
 				// containment data
 				val containmentData = DataSetMetaDataGenerator.autoGenHierarchyDataSet(ModiscoDataPackage.eINSTANCE.containmentItem)
 				val containmentMap = new HashMap<EObject, ContainmentItem>
-				model.eAllContentsAsIterable.forEach[element|			
+				model.eAllContentsAsIterable[!(it instanceof Block)].forEach[element|			
 					val node = ModiscoDataFactory::eINSTANCE.createContainmentItem
 					containmentMap.put(element, node)
 					node.representedElement = element
@@ -129,7 +133,7 @@ class ModiscoToData {
 				DataSetSerialization.write(new File(outputDirectory.path + "/" + pkg.qualifiedName.replace("\\.","/") + "/containment.json"), containmentData)
 				EcoreUtil.delete(containmentData)
 				
-				println("processed " + pkg.qualifiedName)
+				println("- processed " + pkg.qualifiedName)
 			]
 		]
 		executorService.shutdown()
