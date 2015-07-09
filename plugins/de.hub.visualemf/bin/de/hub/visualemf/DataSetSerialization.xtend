@@ -49,7 +49,7 @@ class DataSetSerialization {
 				{
 					«val name = dataItem.eGet(dataSet.nameAttribute)»
 					«val children=dataItem.eGet(dataSet.childrenReference) as EList<? extends DataItem>»
-					
+					"id" : "«dataItem.eGet(dataSet.idAttribute)»"«IF !name.equals("#noname") || !children.empty || dataSet instanceof SizeTreeMapData»,«ENDIF»
 					«IF !name.equals("#noname")»
 						"name" : "«dataItem.eGet(dataSet.nameAttribute)»"«IF !children.empty || dataSet instanceof SizeTreeMapData»,«ENDIF»
 					«ENDIF»					

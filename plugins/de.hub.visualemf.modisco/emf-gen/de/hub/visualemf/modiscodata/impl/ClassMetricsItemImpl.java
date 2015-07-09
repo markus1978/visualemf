@@ -17,16 +17,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getWmc <em>Wmc</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getDit <em>Dit</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getNoc <em>Noc</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getCbo <em>Cbo</em>}</li>
- *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getNom <em>Nom</em>}</li>
- *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getNoam <em>Noam</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getRfc <em>Rfc</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getLcom <em>Lcom</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.ClassMetricsItemImpl#getSize <em>Size</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -112,44 +112,44 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 	protected int cbo = CBO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+	 * The default value of the '{@link #getRfc() <em>Rfc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNom()
+	 * @see #getRfc()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NOM_EDEFAULT = 0;
+	protected static final int RFC_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+	 * The cached value of the '{@link #getRfc() <em>Rfc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNom()
+	 * @see #getRfc()
 	 * @generated
 	 * @ordered
 	 */
-	protected int nom = NOM_EDEFAULT;
+	protected int rfc = RFC_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNoam() <em>Noam</em>}' attribute.
+	 * The default value of the '{@link #getLcom() <em>Lcom</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNoam()
+	 * @see #getLcom()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NOAM_EDEFAULT = 0;
+	protected static final int LCOM_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getNoam() <em>Noam</em>}' attribute.
+	 * The cached value of the '{@link #getLcom() <em>Lcom</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNoam()
+	 * @see #getLcom()
 	 * @generated
 	 * @ordered
 	 */
-	protected int noam = NOAM_EDEFAULT;
+	protected int lcom = LCOM_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -279,8 +279,8 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNom() {
-		return nom;
+	public int getRfc() {
+		return rfc;
 	}
 
 	/**
@@ -288,11 +288,11 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNom(int newNom) {
-		int oldNom = nom;
-		nom = newNom;
+	public void setRfc(int newRfc) {
+		int oldRfc = rfc;
+		rfc = newRfc;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModiscoDataPackage.CLASS_METRICS_ITEM__NOM, oldNom, nom));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModiscoDataPackage.CLASS_METRICS_ITEM__RFC, oldRfc, rfc));
 	}
 
 	/**
@@ -300,8 +300,8 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNoam() {
-		return noam;
+	public int getLcom() {
+		return lcom;
 	}
 
 	/**
@@ -309,11 +309,11 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNoam(int newNoam) {
-		int oldNoam = noam;
-		noam = newNoam;
+	public void setLcom(int newLcom) {
+		int oldLcom = lcom;
+		lcom = newLcom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModiscoDataPackage.CLASS_METRICS_ITEM__NOAM, oldNoam, noam));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModiscoDataPackage.CLASS_METRICS_ITEM__LCOM, oldLcom, lcom));
 	}
 
 	/**
@@ -353,10 +353,10 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 				return getNoc();
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__CBO:
 				return getCbo();
-			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOM:
-				return getNom();
-			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOAM:
-				return getNoam();
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__RFC:
+				return getRfc();
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__LCOM:
+				return getLcom();
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__SIZE:
 				return getSize();
 		}
@@ -383,11 +383,11 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__CBO:
 				setCbo((Integer)newValue);
 				return;
-			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOM:
-				setNom((Integer)newValue);
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__RFC:
+				setRfc((Integer)newValue);
 				return;
-			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOAM:
-				setNoam((Integer)newValue);
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__LCOM:
+				setLcom((Integer)newValue);
 				return;
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__SIZE:
 				setSize((Integer)newValue);
@@ -416,11 +416,11 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__CBO:
 				setCbo(CBO_EDEFAULT);
 				return;
-			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOM:
-				setNom(NOM_EDEFAULT);
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__RFC:
+				setRfc(RFC_EDEFAULT);
 				return;
-			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOAM:
-				setNoam(NOAM_EDEFAULT);
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__LCOM:
+				setLcom(LCOM_EDEFAULT);
 				return;
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__SIZE:
 				setSize(SIZE_EDEFAULT);
@@ -445,10 +445,10 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 				return noc != NOC_EDEFAULT;
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__CBO:
 				return cbo != CBO_EDEFAULT;
-			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOM:
-				return nom != NOM_EDEFAULT;
-			case ModiscoDataPackage.CLASS_METRICS_ITEM__NOAM:
-				return noam != NOAM_EDEFAULT;
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__RFC:
+				return rfc != RFC_EDEFAULT;
+			case ModiscoDataPackage.CLASS_METRICS_ITEM__LCOM:
+				return lcom != LCOM_EDEFAULT;
 			case ModiscoDataPackage.CLASS_METRICS_ITEM__SIZE:
 				return size != SIZE_EDEFAULT;
 		}
@@ -473,10 +473,10 @@ public class ClassMetricsItemImpl extends MoDiscoDataItemImpl implements ClassMe
 		result.append(noc);
 		result.append(", cbo: ");
 		result.append(cbo);
-		result.append(", nom: ");
-		result.append(nom);
-		result.append(", noam: ");
-		result.append(noam);
+		result.append(", rfc: ");
+		result.append(rfc);
+		result.append(", lcom: ");
+		result.append(lcom);
 		result.append(", size: ");
 		result.append(size);
 		result.append(')');

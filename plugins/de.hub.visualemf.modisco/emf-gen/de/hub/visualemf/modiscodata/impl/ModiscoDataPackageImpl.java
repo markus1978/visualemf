@@ -181,7 +181,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassMetricsItem_Nom() {
+	public EAttribute getClassMetricsItem_Rfc() {
 		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -190,7 +190,7 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassMetricsItem_Noam() {
+	public EAttribute getClassMetricsItem_Lcom() {
 		return (EAttribute)classMetricsItemEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -353,8 +353,8 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__DIT);
 		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__NOC);
 		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__CBO);
-		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__NOM);
-		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__NOAM);
+		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__RFC);
+		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__LCOM);
 		createEAttribute(classMetricsItemEClass, CLASS_METRICS_ITEM__SIZE);
 
 		containmentItemEClass = createEClass(CONTAINMENT_ITEM);
@@ -421,8 +421,8 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 		initEAttribute(getClassMetricsItem_Dit(), theEcorePackage.getEInt(), "dit", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassMetricsItem_Noc(), theEcorePackage.getEInt(), "noc", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassMetricsItem_Cbo(), theEcorePackage.getEInt(), "cbo", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassMetricsItem_Nom(), theEcorePackage.getEInt(), "nom", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassMetricsItem_Noam(), theEcorePackage.getEInt(), "noam", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClassMetricsItem_Rfc(), theEcorePackage.getEInt(), "rfc", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClassMetricsItem_Lcom(), theEcorePackage.getEInt(), "lcom", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassMetricsItem_Size(), theEcorePackage.getEInt(), "size", null, 0, 1, ClassMetricsItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containmentItemEClass, ContainmentItem.class, "ContainmentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

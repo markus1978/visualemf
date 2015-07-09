@@ -187,22 +187,22 @@ public interface ModiscoDataPackage extends EPackage {
 	int CLASS_METRICS_ITEM__CBO = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Rfc</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM__NOM = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 4;
+	int CLASS_METRICS_ITEM__RFC = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Noam</b></em>' attribute.
+	 * The feature id for the '<em><b>Lcom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_METRICS_ITEM__NOAM = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 5;
+	int CLASS_METRICS_ITEM__LCOM = MO_DISCO_DATA_ITEM_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -552,26 +552,26 @@ public interface ModiscoDataPackage extends EPackage {
 	EAttribute getClassMetricsItem_Cbo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getNom <em>Nom</em>}'.
+	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getRfc <em>Rfc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom</em>'.
-	 * @see de.hub.visualemf.modiscodata.ClassMetricsItem#getNom()
+	 * @return the meta object for the attribute '<em>Rfc</em>'.
+	 * @see de.hub.visualemf.modiscodata.ClassMetricsItem#getRfc()
 	 * @see #getClassMetricsItem()
 	 * @generated
 	 */
-	EAttribute getClassMetricsItem_Nom();
+	EAttribute getClassMetricsItem_Rfc();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getNoam <em>Noam</em>}'.
+	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getLcom <em>Lcom</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Noam</em>'.
-	 * @see de.hub.visualemf.modiscodata.ClassMetricsItem#getNoam()
+	 * @return the meta object for the attribute '<em>Lcom</em>'.
+	 * @see de.hub.visualemf.modiscodata.ClassMetricsItem#getLcom()
 	 * @see #getClassMetricsItem()
 	 * @generated
 	 */
-	EAttribute getClassMetricsItem_Noam();
+	EAttribute getClassMetricsItem_Lcom();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getSize <em>Size</em>}'.
@@ -788,20 +788,20 @@ public interface ModiscoDataPackage extends EPackage {
 		EAttribute CLASS_METRICS_ITEM__CBO = eINSTANCE.getClassMetricsItem_Cbo();
 
 		/**
-		 * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Rfc</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CLASS_METRICS_ITEM__NOM = eINSTANCE.getClassMetricsItem_Nom();
+		EAttribute CLASS_METRICS_ITEM__RFC = eINSTANCE.getClassMetricsItem_Rfc();
 
 		/**
-		 * The meta object literal for the '<em><b>Noam</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Lcom</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CLASS_METRICS_ITEM__NOAM = eINSTANCE.getClassMetricsItem_Noam();
+		EAttribute CLASS_METRICS_ITEM__LCOM = eINSTANCE.getClassMetricsItem_Lcom();
 
 		/**
 		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.

@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.DeclarationContainmentItemImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.DeclarationContainmentItemImpl#getSize <em>Size</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

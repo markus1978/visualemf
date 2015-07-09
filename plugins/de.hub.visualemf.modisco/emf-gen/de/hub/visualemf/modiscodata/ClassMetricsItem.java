@@ -10,16 +10,16 @@ package de.hub.visualemf.modiscodata;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getWmc <em>Wmc</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getDit <em>Dit</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getNoc <em>Noc</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getCbo <em>Cbo</em>}</li>
- *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getNom <em>Nom</em>}</li>
- *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getNoam <em>Noam</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getRfc <em>Rfc</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getLcom <em>Lcom</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getSize <em>Size</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getClassMetricsItem()
  * @model
@@ -131,56 +131,56 @@ public interface ClassMetricsItem extends MoDiscoDataItem {
 	void setCbo(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Nom</b></em>' attribute.
+	 * Returns the value of the '<em><b>Rfc</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nom</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Rfc</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nom</em>' attribute.
-	 * @see #setNom(int)
-	 * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getClassMetricsItem_Nom()
+	 * @return the value of the '<em>Rfc</em>' attribute.
+	 * @see #setRfc(int)
+	 * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getClassMetricsItem_Rfc()
 	 * @model
 	 * @generated
 	 */
-	int getNom();
+	int getRfc();
 
 	/**
-	 * Sets the value of the '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getNom <em>Nom</em>}' attribute.
+	 * Sets the value of the '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getRfc <em>Rfc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nom</em>' attribute.
-	 * @see #getNom()
+	 * @param value the new value of the '<em>Rfc</em>' attribute.
+	 * @see #getRfc()
 	 * @generated
 	 */
-	void setNom(int value);
+	void setRfc(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Noam</b></em>' attribute.
+	 * Returns the value of the '<em><b>Lcom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Noam</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Lcom</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Noam</em>' attribute.
-	 * @see #setNoam(int)
-	 * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getClassMetricsItem_Noam()
+	 * @return the value of the '<em>Lcom</em>' attribute.
+	 * @see #setLcom(int)
+	 * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getClassMetricsItem_Lcom()
 	 * @model
 	 * @generated
 	 */
-	int getNoam();
+	int getLcom();
 
 	/**
-	 * Sets the value of the '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getNoam <em>Noam</em>}' attribute.
+	 * Sets the value of the '{@link de.hub.visualemf.modiscodata.ClassMetricsItem#getLcom <em>Lcom</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Noam</em>' attribute.
-	 * @see #getNoam()
+	 * @param value the new value of the '<em>Lcom</em>' attribute.
+	 * @see #getLcom()
 	 * @generated
 	 */
-	void setNoam(int value);
+	void setLcom(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.

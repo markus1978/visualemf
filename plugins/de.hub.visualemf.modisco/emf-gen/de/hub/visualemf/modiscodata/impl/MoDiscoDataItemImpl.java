@@ -2,6 +2,7 @@
  */
 package de.hub.visualemf.modiscodata.impl;
 
+import de.hub.srcrepo.metrics.ModiscoMetrics;
 import de.hub.visualemf.data.impl.DataItemImpl;
 import de.hub.visualemf.modisco.ModiscoToData;
 import de.hub.visualemf.modiscodata.MoDiscoDataItem;
@@ -12,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.gmt.modisco.java.NamedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,12 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.MoDiscoDataItemImpl#getRepresentedElement <em>Represented Element</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.MoDiscoDataItemImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.MoDiscoDataItemImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -122,7 +124,11 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 	 * @generated NOT
 	 */
 	public String getName() {
-		return ModiscoToData.name(getRepresentedElement());
+		if (getRepresentedElement() instanceof NamedElement) {
+			return ((NamedElement)getRepresentedElement()).getName();
+		} else {
+			return "#noname";
+		}
 	}
 
 	/**
@@ -142,7 +148,7 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 	 * @generated NOT
 	 */
 	public String getId() {
-		return ModiscoToData.qualifiedId(getRepresentedElement());
+		return ModiscoMetrics.qualifiedName(getRepresentedElement());
 	}
 
 	/**

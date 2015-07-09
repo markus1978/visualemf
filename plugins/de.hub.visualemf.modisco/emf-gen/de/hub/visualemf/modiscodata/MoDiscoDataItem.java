@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getRepresentedElement <em>Represented Element</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getName <em>Name</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getMoDiscoDataItem()
  * @model

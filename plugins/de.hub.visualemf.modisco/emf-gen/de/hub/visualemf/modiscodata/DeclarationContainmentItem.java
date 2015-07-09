@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.DeclarationContainmentItem#getChildren <em>Children</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.DeclarationContainmentItem#getSize <em>Size</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getDeclarationContainmentItem()
  * @model

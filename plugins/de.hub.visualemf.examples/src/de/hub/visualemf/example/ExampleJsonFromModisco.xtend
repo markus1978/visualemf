@@ -1,7 +1,9 @@
 package de.hub.visualemf.example
 
+import de.hub.srcrepo.metrics.ModiscoMetrics
 import java.io.File
 import java.io.PrintWriter
+import java.util.HashSet
 import org.eclipse.emf.common.util.TreeIterator
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.EObject
@@ -12,17 +14,15 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration
 import org.eclipse.gmt.modisco.java.AbstractMethodInvocation
+import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration
 import org.eclipse.gmt.modisco.java.ClassDeclaration
-import org.eclipse.gmt.modisco.java.FieldDeclaration
-import org.eclipse.gmt.modisco.java.InterfaceDeclaration
 import org.eclipse.gmt.modisco.java.NamedElement
 import org.eclipse.gmt.modisco.java.TypeDeclaration
 import org.eclipse.gmt.modisco.java.emf.JavaPackage
 import org.json.JSONArray
 import org.json.JSONObject
-import java.util.HashSet
-import org.json.JSONString
-import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration
+
+import static extension de.hub.srcrepo.metrics.ModiscoMetrics.*
 
 class ExampleJsonFromModisco {
 	
@@ -32,11 +32,7 @@ class ExampleJsonFromModisco {
 	var currentClassDeps = new HashSet<EObject>();
 	
 	val parrallelCoordsData = new JSONObject
-	
-	var methods = 0
-	var fields = 0
-	var calls = 0
-	
+
 	var TreeIterator<EObject> iterator = null
 	
 	def static main(String[] args) {
@@ -52,9 +48,7 @@ class ExampleJsonFromModisco {
 	
 	def run(String in, String methodDepData, String classDepData, String parrallelCoordsData) {
 		val head = new JSONArray
-		head.put("methods")
-		head.put("calls")
-		head.put("fields")
+		ModiscoMetrics::metrics.map[it.metricName].forEach[head.put(it)]
 		this.parrallelCoordsData.put("head", head)
 		
 		val rs = new ResourceSetImpl
@@ -118,9 +112,6 @@ class ExampleJsonFromModisco {
 	def dispatch after(EObject obj) {}
 	
 	def dispatch boolean visit(AbstractTypeDeclaration type) {
-		methods = 0;
-		calls = 0;
-		fields = 0;
 		currentClassDeps.clear();
 		return true;
 	}
@@ -130,9 +121,14 @@ class ExampleJsonFromModisco {
 			val value = new JSONObject
 			value.put("name", type.name)
 			val values = new JSONArray
-			values.put(methods)
-			values.put(calls)
-			values.put(fields)
+			ModiscoMetrics::metrics.forEach[
+				try {
+					values.put(it.invoke(null, type) as Integer)
+				} catch (Exception e) {
+					e.printStackTrace
+					values.put(0)		
+				}
+			]			
 			value.put("values", values)
 			value.put("id", type.id)
 			parrallelCoordsData.accumulate("entries", value)
@@ -152,13 +148,7 @@ class ExampleJsonFromModisco {
 		}
 	}
 	
-	def dispatch boolean visit(FieldDeclaration field) {
-		fields++;
-		return true;
-	}
-	
 	def dispatch boolean visit(AbstractMethodDeclaration method) {
-		methods++;
 		currentMethodDeps.clear();
 		return true;
 	} 
@@ -175,7 +165,6 @@ class ExampleJsonFromModisco {
 	}
 	
 	def dispatch boolean visit(AbstractMethodInvocation declr) {
-		calls++;
 		currentMethodDeps.add(declr.method)
 		var current = declr.method as EObject
 		while (!(current instanceof TypeDeclaration)) {

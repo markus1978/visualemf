@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.modiscodata.PackageDependencyItem#getDependencies <em>Dependencies</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getPackageDependencyItem()
  * @model
