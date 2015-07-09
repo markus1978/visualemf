@@ -1,1 +1,5 @@
-jdt.*
+*.jdt.xml
+*.jdt.xml.zip
+*.jdt.xmi
+*.jdt.xmi.zip
+
