@@ -6,6 +6,7 @@ import de.hub.srcrepo.metrics.ModiscoMetrics;
 import de.hub.visualemf.data.impl.DataItemImpl;
 import de.hub.visualemf.modiscodata.MoDiscoDataItem;
 import de.hub.visualemf.modiscodata.ModiscoDataPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -122,8 +123,16 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 	 * @generated NOT
 	 */
 	public String getName() {
+		if (getRepresentedElement() == null) {
+			return "#noname";
+		}
 		if (getRepresentedElement() instanceof NamedElement) {
-			return ((NamedElement)getRepresentedElement()).getName();
+			String name = ((NamedElement)getRepresentedElement()).getName();
+			if (name == null) {
+				return "#noname";
+			} else {
+				return name;
+			}
 		} else {
 			return "#noname";
 		}

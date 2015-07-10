@@ -40,7 +40,7 @@ class ModiscoToData {
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new XMIResourceFactoryImpl);
 		
 		val instance = new ModiscoToData
-		instance.run(new File("output/jdt"), new File("model/org.eclipse.jdt.xmi.zip"))		
+		instance.run(new File("../de.hub.visualemf.gwt/examples/war/data/emffrag"), new File("model/emffrag.xmi.zip"))		
 	}
 	
 	private def isSelectPackage(Package pkg) {

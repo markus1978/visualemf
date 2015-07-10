@@ -1,7 +1,0 @@
-[
-	{
-		"name" : "BigInteger",
-		"id" : "java.math.BigInteger",
-		"links" : ["java.lang.Object", "java.lang.Number", "java.lang.Comparable"]
-	}
-]

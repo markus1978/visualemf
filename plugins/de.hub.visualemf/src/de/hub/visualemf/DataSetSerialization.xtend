@@ -14,13 +14,13 @@ class DataSetSerialization {
 	
 	static dispatch def serialize(DataTable dataSet) '''
 		{
-			"head" : [ «FOR column:dataSet.columnFeatures SEPARATOR ", "»«column.name»«ENDFOR» ],
+			"head" : [ «FOR column:dataSet.columnFeatures SEPARATOR ", "»"«column.name»"«ENDFOR» ],
 			"entries" : [
 				«FOR dataItem:dataSet.items SEPARATOR ","»
 					{
 						"name" : "«dataItem.eGet(dataSet.nameAttribute)»",
 						"id" : "«dataItem.eGet(dataSet.idAttribute)»",
-						"values"" : [«FOR column:dataSet.columnFeatures SEPARATOR ", "»«dataItem.eGet(column)»«ENDFOR»]
+						"values" : [«FOR column:dataSet.columnFeatures SEPARATOR ", "»«dataItem.eGet(column)»«ENDFOR»]
 					}
 				«ENDFOR»
 			]

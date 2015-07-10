@@ -213,9 +213,4 @@ public class ContainmentItemImpl extends MoDiscoDataItemImpl implements Containm
 		return result.toString();
 	}
 
-	@Override
-	public String getName() {
-		return getRepresentedElement().eClass().getName();
-	}
-
 } //ContainmentItemImpl

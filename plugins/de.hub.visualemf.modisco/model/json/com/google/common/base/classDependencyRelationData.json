@@ -1,7 +1,0 @@
-[
-	{
-		"name" : "Throwables",
-		"id" : "com.google.common.base.Throwables",
-		"links" : ["java.lang.Throwable"]
-	}
-]

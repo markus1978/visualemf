@@ -2,29 +2,49 @@ package de.hub.visualemf.gwt.examples.client;
 
 import com.github.gwtd3.api.D3;
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class GwtExamples implements EntryPoint {
 
 	public void onModuleLoad() {
+		
 		final Label versionLabel = new Label("d3.js current version: " + D3.version());
-		RootPanel.get().add(versionLabel);
-		
-		ChordDiagram chordDiagram = new ChordDiagram();
-		RootPanel.get("ChordDiagram").add(chordDiagram);
-		chordDiagram.render();
-		
+		Directory directory = new Directory();
 		ParallelCoordinates parallelCoordinates = new ParallelCoordinates();
-		RootPanel.get("ParallelCoordinates").add(parallelCoordinates);
-		parallelCoordinates.render();
-		
-		TreeMap treeMap = new TreeMap();
-		RootPanel.get("TreeMap").add(treeMap);
-		treeMap.render();
-		
 		Sunburst sunburst = new Sunburst();
-		RootPanel.get("Sunburst").add(sunburst);
-		sunburst.render();
+		SelectionVis selection = new SelectionVis();
+		
+		DockLayoutPanel p = new DockLayoutPanel(Unit.PX);
+		p.addNorth(selection, 110);
+		p.addSouth(versionLabel, 20);
+		p.addWest(directory, 250);
+		
+		VerticalPanel content = new VerticalPanel();
+		content.add(parallelCoordinates);
+		content.add(sunburst);
+		
+		p.add(content);
+		RootLayoutPanel.get().add(p);
+		RootLayoutPanel.get().setStylePrimaryName("root-panel");
+		
+		Selection.instance.add(this, new Selection.SelectionItem("de/hub/emffrag/fragmentation", null, null));
+	
+		
+//		ChordDiagram chordDiagram = new ChordDiagram();
+//		RootPanel.get("ChordDiagram").add(chordDiagram);
+//		chordDiagram.render();
+		
+		
+//		TreeMap treeMap = new TreeMap();
+//		RootPanel.get("TreeMap").add(treeMap);
+//		treeMap.render();
+//		
+//		Sunburst sunburst = new Sunburst();
+//		RootPanel.get("Sunburst").add(sunburst);
+//		sunburst.render();
 	}
 }
