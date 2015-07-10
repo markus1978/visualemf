@@ -24,6 +24,8 @@ import de.itemis.xtend.auto.gwt.OverlayTypeByExample
 import java.util.HashMap
 import java.util.Map
 
+import static extension de.hub.visualemf.gwt.examples.client.GlobalSelection.*
+
 @OverlayTypeByExample('
   {
 	"head":["metric"],
@@ -88,7 +90,10 @@ class ParallelCoordinates extends AbstractPackageVis<TableData> {
 	}
 	
 	override protected updateSelection() {
-		
+		 coordLines.classed(css.selected, [e,d,i |
+		 	val entry = d.<TableData.Entrie>^as
+		 	return selection.current.contains(entry.id.newSelectionItemFromClass)		 	
+        ])
 	}
 	
 	override def updateData(TableData data) {
