@@ -2,10 +2,9 @@ package de.hub.visualemf.gwt.examples.client
 
 import java.util.ArrayList
 import java.util.HashSet
-import org.eclipse.xtext.xbase.lib.Functions.Function1
 import org.eclipse.xtend.lib.annotations.Data
 
-class Selection {
+class GlobalSelection {
 	
 	@Data
 	public static class SelectionItem {
@@ -24,13 +23,13 @@ class Selection {
 		}
 	}
 	
-	public static val Selection instance = new Selection
+	public static val GlobalSelection instance = new GlobalSelection
 	
-	private val listeners = new ArrayList<Pair<Object, Function1<Iterable<SelectionItem>, Void>>>
+	private val listeners = new ArrayList<Pair<Object, (Iterable<SelectionItem>)=>Void>>
 	private val ids = new HashSet<SelectionItem>
 	 
 	private def notifyChange(Object source) {
-		listeners.filter[it.key != source].forEach[it.value.apply(ids)]
+		listeners.filter[it.key != source].forEach[listener,index|listener.value.apply(ids)]
 	}
 	
 	def set(Object source, SelectionItem id) {
@@ -68,11 +67,28 @@ class Selection {
 		}
 	}
 	
-	def addListener(Object target, Function1<Iterable<SelectionItem>, Void> listener) {
+	def addListener(Object target, (Iterable<SelectionItem>)=>Void listener) {
 		listeners += target -> listener
 	}
 	
 	def getCurrent() {
 		return ids
+	}
+	
+	static def newSelectionItemFromMethod(String id) {
+		val clazz = id.substring(0, id.lastIndexOf("."))
+		val pkg = id.substring(0, clazz.lastIndexOf("."))
+		return new SelectionItem(pkg, clazz, id)
+	}
+	
+	static def newSelectionItemFromMethodClass(String id) {
+		val clazz = id.substring(0, id.lastIndexOf("."))
+		val pkg = id.substring(0, clazz.lastIndexOf("."))
+		return new SelectionItem(pkg, clazz, null)
+	}
+	
+	static def newSelectionItemFromClass(String id) {
+		val pkg = id.substring(0, id.lastIndexOf("."))
+		return new SelectionItem(pkg, id, null)
 	}
 }

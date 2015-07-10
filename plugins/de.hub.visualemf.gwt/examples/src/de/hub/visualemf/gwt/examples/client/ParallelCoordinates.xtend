@@ -7,16 +7,15 @@ import com.github.gwtd3.api.D3Event
 import com.github.gwtd3.api.arrays.Array
 import com.github.gwtd3.api.arrays.NumericForEachCallback
 import com.github.gwtd3.api.behaviour.Drag.DragEventType
+import com.github.gwtd3.api.core.Selection
 import com.github.gwtd3.api.scales.LinearScale
 import com.github.gwtd3.api.scales.OrdinalScale
 import com.github.gwtd3.api.svg.Axis.Orientation
 import com.github.gwtd3.api.svg.Brush
 import com.github.gwtd3.api.svg.Brush.BrushEvent
 import com.google.gwt.core.client.JsArrayNumber
-import com.google.gwt.core.client.JsonUtils
 import com.google.gwt.dom.client.Element
-import com.google.gwt.user.client.ui.DecoratorPanel
-import com.google.gwt.user.client.ui.FlowPanel
+import de.hub.visualemf.gwt.examples.client.GlobalSelection.SelectionItem
 import de.hub.visualemf.gwt.examples.client.TableData.Entrie
 import de.itemis.xtend.auto.gwt.ClientBundle
 import de.itemis.xtend.auto.gwt.CssResource
@@ -24,7 +23,6 @@ import de.itemis.xtend.auto.gwt.JsNative
 import de.itemis.xtend.auto.gwt.OverlayTypeByExample
 import java.util.HashMap
 import java.util.Map
-import de.hub.visualemf.gwt.examples.client.Selection.SelectionItem
 
 @OverlayTypeByExample('
   {
@@ -46,9 +44,9 @@ public interface ParallelCoordinatesBundle {
 	
 }
 
-class ParallelCoordinates extends FlowPanel {
+class ParallelCoordinates extends AbstractPackageVis<TableData> {
 	
-	val selection = Selection::instance
+	val selection = GlobalSelection::instance
 	
 	val margin = 10
 	val width = 750
@@ -64,11 +62,15 @@ class ParallelCoordinates extends FlowPanel {
 	var Array<Brush> brushes
 	var Map<String,Double> dragging
 	
-	var com.github.gwtd3.api.core.Selection coordLinesContainer
-	var com.github.gwtd3.api.core.Selection coordLines
-	var com.github.gwtd3.api.core.Selection dimensionGroups
+	var Selection coordLinesContainer
+	var Selection coordLines
+	var Selection dimensionGroups
 	
-	var com.github.gwtd3.api.core.Selection svg = null
+	var Selection svg = null
+	
+	override protected getFileName() {
+		"metrics.json"
+	}
 	
 	override def onLoad() {		
 		// TODO the top margin extension for the header names is ugly implemented
@@ -81,23 +83,15 @@ class ParallelCoordinates extends FlowPanel {
 	        
 	    coordLinesContainer = svg.append("g")
 	    	.attr("class", css.foreground)
-	        
-	    selection.addListener(this)[items|
-	    	if (!items.empty) {
-	    		val item = items.findFirst[true]
-	    		DataHelper::load(item.pkg + "/metrics.json")[result|
-	    			if (result != null) {
-		    			val data = JsonUtils.<TableData>safeEval(result)
-		    			update(data)		    			
-		    		}
-		    		return null
-	    		]	    		
-	    	}
-	    	return null
-	    ]
+	    
+	    super.onLoad()    	    
 	}
 	
-	def update(TableData data) {
+	override protected updateSelection() {
+		
+	}
+	
+	override def updateData(TableData data) {
 		val axis = D3.svg.axis().orient(Orientation.LEFT)  
 		dimensions = data.head.cast
 		originalDimensions = dimensions.map[e,d,i,a|d.asString]
@@ -184,7 +178,7 @@ class ParallelCoordinates extends FlowPanel {
         		return extent.get(0) <= y && extent.get(1) > y
         	]
         	val clazz = entry.<Entrie>^as.id
-        	val pkg = clazz.substring(0, clazz.lastIndexOf("/"))
+        	val pkg = clazz.substring(0, clazz.lastIndexOf("."))
         	if (isSelected) {        	
         		selection.add(ParallelCoordinates.this, new SelectionItem(pkg, clazz, null))
         	} else {

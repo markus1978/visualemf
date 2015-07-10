@@ -17,7 +17,7 @@ class SelectionVis extends FlowPanel {
 		
 		super.add(staticDecorator)
 		
-		Selection::instance.addListener(this)[selection|
+		GlobalSelection::instance.addListener(this)[selection|
 			panel.clear
 			for(item: selection) {
 				panel.add(new HTML(item.toString))				

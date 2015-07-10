@@ -187,7 +187,7 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 	 * @generated NOT
 	 */
 	public String getId() {
-		return ModiscoMetrics.qualifiedName(getRepresentedElement());
+		return ModiscoMetrics.qualifiedName(getRepresentedElement()).replace('/', '.');
 	}
 
 	/**

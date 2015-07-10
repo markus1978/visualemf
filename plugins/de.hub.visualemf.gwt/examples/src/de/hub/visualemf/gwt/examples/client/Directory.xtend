@@ -7,9 +7,9 @@ import com.google.gwt.user.client.ui.DecoratorPanel
 import com.google.gwt.user.client.ui.FlowPanel
 import com.google.gwt.user.client.ui.ScrollPanel
 import com.google.gwt.user.client.ui.Tree
+import de.hub.visualemf.gwt.examples.client.GlobalSelection.SelectionItem
 import de.itemis.xtend.auto.gwt.JsNative
 import org.eclipse.xtext.xbase.lib.Functions.Function2
-import de.hub.visualemf.gwt.examples.client.Selection.SelectionItem
 
 class Directory extends FlowPanel {
 	
@@ -46,7 +46,7 @@ class Directory extends FlowPanel {
 			} else {
 				tree.addTextItem("Error")
 			}
-			select(Selection::instance.current)
+			select(GlobalSelection::instance.current)
 			return null
 		]
 		
@@ -57,7 +57,7 @@ class Directory extends FlowPanel {
 			} else {
 				new SelectionItem(selectedItem.parentItem.userObject as String, selectedItem.userObject as String, null)
 			}
-			Selection::instance.set(Directory.this, selectionItem)
+			GlobalSelection::instance.set(Directory.this, selectionItem)
 		]
 		return tree;
 	}
@@ -76,7 +76,7 @@ class Directory extends FlowPanel {
 		
 		add(staticDecorator)
 		
-		Selection::instance.addListener(this)[it.select; return null]
+		GlobalSelection::instance.addListener(this)[it.select; return null]
 	}
 	
 	private def void select(Iterable<SelectionItem> ids) {

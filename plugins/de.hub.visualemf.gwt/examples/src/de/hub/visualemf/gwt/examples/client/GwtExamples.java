@@ -44,7 +44,7 @@ public class GwtExamples implements EntryPoint {
 		RootLayoutPanel.get().add(p);
 		RootLayoutPanel.get().setStylePrimaryName("root-panel");
 		
-		Selection.instance.add(this, new Selection.SelectionItem("de/hub/emffrag/fragmentation", null, null));
+		GlobalSelection.instance.add(this, new GlobalSelection.SelectionItem("de/hub/emffrag/fragmentation", null, null));
 	
 		
 //		ChordDiagram chordDiagram = new ChordDiagram();
