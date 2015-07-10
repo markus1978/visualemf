@@ -20,8 +20,8 @@ class Sunburst extends FlowPanel {
 	
 	val selection = Selection::instance
 	
-	val width = 730
-	val height = 500
+	val width = 350
+	val height = 350
 	
 	val css = SunburstBundle.Util.get.SunburstStyles;
 	

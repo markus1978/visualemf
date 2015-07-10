@@ -3,7 +3,9 @@ package de.hub.visualemf.gwt.examples.client;
 import com.github.gwtd3.api.D3;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.user.client.ui.DecoratorPanel;
 import com.google.gwt.user.client.ui.DockLayoutPanel;
+import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -16,18 +18,29 @@ public class GwtExamples implements EntryPoint {
 		Directory directory = new Directory();
 		ParallelCoordinates parallelCoordinates = new ParallelCoordinates();
 		Sunburst sunburst = new Sunburst();
+		ChordDiagram chord = new ChordDiagram();
 		SelectionVis selection = new SelectionVis();
 		
 		DockLayoutPanel p = new DockLayoutPanel(Unit.PX);
 		p.addNorth(selection, 110);
 		p.addSouth(versionLabel, 20);
 		p.addWest(directory, 250);
+
 		
 		VerticalPanel content = new VerticalPanel();
 		content.add(parallelCoordinates);
-		content.add(sunburst);
 		
-		p.add(content);
+		HorizontalPanel details = new HorizontalPanel();
+		details.add(chord);
+		details.add(sunburst);
+		
+		
+		content.add(details);
+		
+		DecoratorPanel decoratorPanel = new DecoratorPanel();
+		decoratorPanel.setWidget(content);
+		
+		p.add(decoratorPanel);
 		RootLayoutPanel.get().add(p);
 		RootLayoutPanel.get().setStylePrimaryName("root-panel");
 		

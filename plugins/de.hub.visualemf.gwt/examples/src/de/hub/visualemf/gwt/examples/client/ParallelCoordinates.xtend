@@ -46,7 +46,7 @@ public interface ParallelCoordinatesBundle {
 	
 }
 
-class ParallelCoordinates extends DecoratorPanel {
+class ParallelCoordinates extends FlowPanel {
 	
 	val selection = Selection::instance
 	
@@ -72,7 +72,7 @@ class ParallelCoordinates extends DecoratorPanel {
 	
 	override def onLoad() {		
 		// TODO the top margin extension for the header names is ugly implemented
-		svg = D3.select(this.element).select(".middleCenterInner")
+		svg = D3.select(this.element)
 	    	.append("svg")
 	        .attr("width", width)
 	        .attr("height", height)
