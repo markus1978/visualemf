@@ -25,6 +25,8 @@ import org.eclipse.gmt.modisco.java.NamedElement;
  *   <li>{@link de.hub.visualemf.modiscodata.impl.MoDiscoDataItemImpl#getRepresentedElement <em>Represented Element</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.MoDiscoDataItemImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.impl.MoDiscoDataItemImpl#getId <em>Id</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.impl.MoDiscoDataItemImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.impl.MoDiscoDataItemImpl#isDeclaration <em>Declaration</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +61,36 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #isDeclaration() <em>Declaration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDeclaration()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean DECLARATION_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isDeclaration() <em>Declaration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDeclaration()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean declaration = DECLARATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,6 +204,47 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getType() {
+		return getRepresentedElement().eClass().getName();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		// TODO: implement this method to return whether the 'Type' attribute is set
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDeclaration() {
+		return declaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDeclaration(boolean newDeclaration) {
+		boolean oldDeclaration = declaration;
+		declaration = newDeclaration;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModiscoDataPackage.MO_DISCO_DATA_ITEM__DECLARATION, oldDeclaration, declaration));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -184,6 +257,10 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 				return getName();
 			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__ID:
 				return getId();
+			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__TYPE:
+				return getType();
+			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__DECLARATION:
+				return isDeclaration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,6 +276,9 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__REPRESENTED_ELEMENT:
 				setRepresentedElement((EObject)newValue);
 				return;
+			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__DECLARATION:
+				setDeclaration((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -213,6 +293,9 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 		switch (featureID) {
 			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__REPRESENTED_ELEMENT:
 				setRepresentedElement((EObject)null);
+				return;
+			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__DECLARATION:
+				setDeclaration(DECLARATION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -232,8 +315,28 @@ public class MoDiscoDataItemImpl extends DataItemImpl implements MoDiscoDataItem
 				return isSetName();
 			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__ID:
 				return isSetId();
+			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__TYPE:
+				return isSetType();
+			case ModiscoDataPackage.MO_DISCO_DATA_ITEM__DECLARATION:
+				return declaration != DECLARATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (declaration: ");
+		result.append(declaration);
+		result.append(')');
+		return result.toString();
 	}
 
 } //MoDiscoDataItemImpl

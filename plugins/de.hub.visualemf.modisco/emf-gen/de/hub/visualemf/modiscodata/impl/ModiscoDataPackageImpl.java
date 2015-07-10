@@ -308,6 +308,24 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMoDiscoDataItem_Type() {
+		return (EAttribute)moDiscoDataItemEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoDiscoDataItem_Declaration() {
+		return (EAttribute)moDiscoDataItemEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModiscoDataFactory getModiscoDataFactory() {
 		return (ModiscoDataFactory)getEFactoryInstance();
 	}
@@ -355,6 +373,8 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 		createEReference(moDiscoDataItemEClass, MO_DISCO_DATA_ITEM__REPRESENTED_ELEMENT);
 		createEAttribute(moDiscoDataItemEClass, MO_DISCO_DATA_ITEM__NAME);
 		createEAttribute(moDiscoDataItemEClass, MO_DISCO_DATA_ITEM__ID);
+		createEAttribute(moDiscoDataItemEClass, MO_DISCO_DATA_ITEM__TYPE);
+		createEAttribute(moDiscoDataItemEClass, MO_DISCO_DATA_ITEM__DECLARATION);
 	}
 
 	/**
@@ -420,6 +440,8 @@ public class ModiscoDataPackageImpl extends EPackageImpl implements ModiscoDataP
 		initEReference(getMoDiscoDataItem_RepresentedElement(), theEcorePackage.getEObject(), null, "representedElement", null, 0, 1, MoDiscoDataItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMoDiscoDataItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, MoDiscoDataItem.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMoDiscoDataItem_Id(), ecorePackage.getEString(), "id", null, 0, 1, MoDiscoDataItem.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoDiscoDataItem_Type(), ecorePackage.getEString(), "type", null, 0, 1, MoDiscoDataItem.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoDiscoDataItem_Declaration(), theEcorePackage.getEBoolean(), "declaration", null, 0, 1, MoDiscoDataItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

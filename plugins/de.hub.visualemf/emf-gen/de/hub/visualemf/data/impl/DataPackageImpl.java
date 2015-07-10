@@ -173,8 +173,17 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDataSet_TypeAttribute() {
+		return (EReference)dataSetEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getDataSet_Name() {
-		return (EAttribute)dataSetEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)dataSetEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -183,7 +192,7 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * @generated
 	 */
 	public EReference getDataSet_Items() {
-		return (EReference)dataSetEClass.getEStructuralFeatures().get(3);
+		return (EReference)dataSetEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -291,6 +300,7 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 		dataSetEClass = createEClass(DATA_SET);
 		createEReference(dataSetEClass, DATA_SET__NAME_ATTRIBUTE);
 		createEReference(dataSetEClass, DATA_SET__ID_ATTRIBUTE);
+		createEReference(dataSetEClass, DATA_SET__TYPE_ATTRIBUTE);
 		createEAttribute(dataSetEClass, DATA_SET__NAME);
 		createEReference(dataSetEClass, DATA_SET__ITEMS);
 
@@ -350,6 +360,7 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 		initEClass(dataSetEClass, DataSet.class, "DataSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataSet_NameAttribute(), theEcorePackage.getEAttribute(), null, "nameAttribute", null, 0, 1, DataSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSet_IdAttribute(), theEcorePackage.getEAttribute(), null, "idAttribute", null, 0, 1, DataSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataSet_TypeAttribute(), theEcorePackage.getEAttribute(), null, "typeAttribute", null, 0, 1, DataSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataSet_Name(), ecorePackage.getEString(), "name", null, 0, 1, DataSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSet_Items(), this.getDataItem(), null, "items", null, 0, -1, DataSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

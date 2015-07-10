@@ -29,8 +29,13 @@ public class DataSetMetaDataGenerator {
 		if (nameAttr == null || !(nameAttr instanceof EAttribute)) {
 			throw new IllegalArgumentException("Invalid data item class with no suitable name attribute.");
 		}
+		EStructuralFeature typeAttr = dataItemClass.getEStructuralFeature("type");
+		if (typeAttr == null || !(typeAttr instanceof EAttribute)) {
+			throw new IllegalArgumentException("Invalid data item class with no suitable name attribute.");
+		}
 		dataSet.setIdAttribute((EAttribute)idAttr);
 		dataSet.setNameAttribute((EAttribute)nameAttr);
+		dataSet.setTypeAttribute((EAttribute)typeAttr);
 		return dataSet;
 	}
 	

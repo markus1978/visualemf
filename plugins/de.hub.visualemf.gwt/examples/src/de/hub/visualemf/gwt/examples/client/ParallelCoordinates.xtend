@@ -183,10 +183,12 @@ class ParallelCoordinates extends DecoratorPanel {
         		val extent = extents.get(activeIndex)
         		return extent.get(0) <= y && extent.get(1) > y
         	]
-        	if (isSelected) {
-        		val clazz = entry.<Entrie>^as.id
-        		val pkg = clazz.substring(0, clazz.lastIndexOf("/"))
+        	val clazz = entry.<Entrie>^as.id
+        	val pkg = clazz.substring(0, clazz.lastIndexOf("/"))
+        	if (isSelected) {        	
         		selection.add(ParallelCoordinates.this, new SelectionItem(pkg, clazz, null))
+        	} else {
+        		selection.remove(ParallelCoordinates.this, new SelectionItem(pkg, clazz, null))
         	}
         	return isSelected
         ])

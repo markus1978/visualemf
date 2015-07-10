@@ -20,10 +20,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.data.impl.DataTableImpl#getColumnFeatures <em>Column Features</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

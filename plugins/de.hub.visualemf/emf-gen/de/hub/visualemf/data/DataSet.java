@@ -12,13 +12,14 @@ import org.eclipse.emf.ecore.EAttribute;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.data.DataSet#getNameAttribute <em>Name Attribute</em>}</li>
  *   <li>{@link de.hub.visualemf.data.DataSet#getIdAttribute <em>Id Attribute</em>}</li>
+ *   <li>{@link de.hub.visualemf.data.DataSet#getTypeAttribute <em>Type Attribute</em>}</li>
  *   <li>{@link de.hub.visualemf.data.DataSet#getName <em>Name</em>}</li>
  *   <li>{@link de.hub.visualemf.data.DataSet#getItems <em>Items</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.hub.visualemf.data.DataPackage#getDataSet()
  * @model
@@ -76,6 +77,32 @@ public interface DataSet extends DataItem {
 	 * @generated
 	 */
 	void setIdAttribute(EAttribute value);
+
+	/**
+	 * Returns the value of the '<em><b>Type Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type Attribute</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type Attribute</em>' reference.
+	 * @see #setTypeAttribute(EAttribute)
+	 * @see de.hub.visualemf.data.DataPackage#getDataSet_TypeAttribute()
+	 * @model
+	 * @generated
+	 */
+	EAttribute getTypeAttribute();
+
+	/**
+	 * Sets the value of the '{@link de.hub.visualemf.data.DataSet#getTypeAttribute <em>Type Attribute</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type Attribute</em>' reference.
+	 * @see #getTypeAttribute()
+	 * @generated
+	 */
+	void setTypeAttribute(EAttribute value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

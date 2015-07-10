@@ -25,13 +25,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.data.impl.DataSetImpl#getNameAttribute <em>Name Attribute</em>}</li>
  *   <li>{@link de.hub.visualemf.data.impl.DataSetImpl#getIdAttribute <em>Id Attribute</em>}</li>
+ *   <li>{@link de.hub.visualemf.data.impl.DataSetImpl#getTypeAttribute <em>Type Attribute</em>}</li>
  *   <li>{@link de.hub.visualemf.data.impl.DataSetImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.hub.visualemf.data.impl.DataSetImpl#getItems <em>Items</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -55,6 +56,16 @@ public class DataSetImpl extends DataItemImpl implements DataSet {
 	 * @ordered
 	 */
 	protected EAttribute idAttribute;
+
+	/**
+	 * The cached value of the '{@link #getTypeAttribute() <em>Type Attribute</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeAttribute()
+	 * @generated
+	 * @ordered
+	 */
+	protected EAttribute typeAttribute;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -186,6 +197,44 @@ public class DataSetImpl extends DataItemImpl implements DataSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTypeAttribute() {
+		if (typeAttribute != null && typeAttribute.eIsProxy()) {
+			InternalEObject oldTypeAttribute = (InternalEObject)typeAttribute;
+			typeAttribute = (EAttribute)eResolveProxy(oldTypeAttribute);
+			if (typeAttribute != oldTypeAttribute) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DataPackage.DATA_SET__TYPE_ATTRIBUTE, oldTypeAttribute, typeAttribute));
+			}
+		}
+		return typeAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute basicGetTypeAttribute() {
+		return typeAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTypeAttribute(EAttribute newTypeAttribute) {
+		EAttribute oldTypeAttribute = typeAttribute;
+		typeAttribute = newTypeAttribute;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DataPackage.DATA_SET__TYPE_ATTRIBUTE, oldTypeAttribute, typeAttribute));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getName() {
 		return name;
 	}
@@ -242,6 +291,9 @@ public class DataSetImpl extends DataItemImpl implements DataSet {
 			case DataPackage.DATA_SET__ID_ATTRIBUTE:
 				if (resolve) return getIdAttribute();
 				return basicGetIdAttribute();
+			case DataPackage.DATA_SET__TYPE_ATTRIBUTE:
+				if (resolve) return getTypeAttribute();
+				return basicGetTypeAttribute();
 			case DataPackage.DATA_SET__NAME:
 				return getName();
 			case DataPackage.DATA_SET__ITEMS:
@@ -264,6 +316,9 @@ public class DataSetImpl extends DataItemImpl implements DataSet {
 				return;
 			case DataPackage.DATA_SET__ID_ATTRIBUTE:
 				setIdAttribute((EAttribute)newValue);
+				return;
+			case DataPackage.DATA_SET__TYPE_ATTRIBUTE:
+				setTypeAttribute((EAttribute)newValue);
 				return;
 			case DataPackage.DATA_SET__NAME:
 				setName((String)newValue);
@@ -290,6 +345,9 @@ public class DataSetImpl extends DataItemImpl implements DataSet {
 			case DataPackage.DATA_SET__ID_ATTRIBUTE:
 				setIdAttribute((EAttribute)null);
 				return;
+			case DataPackage.DATA_SET__TYPE_ATTRIBUTE:
+				setTypeAttribute((EAttribute)null);
+				return;
 			case DataPackage.DATA_SET__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -312,6 +370,8 @@ public class DataSetImpl extends DataItemImpl implements DataSet {
 				return nameAttribute != null;
 			case DataPackage.DATA_SET__ID_ATTRIBUTE:
 				return idAttribute != null;
+			case DataPackage.DATA_SET__TYPE_ATTRIBUTE:
+				return typeAttribute != null;
 			case DataPackage.DATA_SET__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case DataPackage.DATA_SET__ITEMS:

@@ -25,6 +25,10 @@ import org.eclipse.gmt.modisco.java.emf.JavaPackage
 
 import static extension de.hub.srcrepo.metrics.ModiscoMetrics.*
 import static extension de.hub.srcrepo.ocl.OclExtensions.*
+import org.eclipse.gmt.modisco.java.BodyDeclaration
+import org.eclipse.gmt.modisco.java.FieldDeclaration
+import org.eclipse.gmt.modisco.java.VariableDeclaration
+import org.eclipse.gmt.modisco.java.VariableDeclarationFragment
 
 class ModiscoToData {
 	
@@ -137,19 +141,25 @@ class ModiscoToData {
 				val containmentData = DataSetMetaDataGenerator.autoGenSizeTreeDataSet(ModiscoDataPackage.eINSTANCE.containmentItem)		
 				val root = ModiscoDataFactory::eINSTANCE.createContainmentItem
 				pkg.eTraverse(root)[eObject, parent|
-					val node = ModiscoDataFactory::eINSTANCE.createContainmentItem					
-					node.representedElement = eObject
-					if (parent == root) {
-						containmentData.items += node
+					if ((eObject instanceof Package) || (eObject instanceof BodyDeclaration) ||
+							(eObject instanceof VariableDeclaration)) {
+
+						val node = ModiscoDataFactory::eINSTANCE.createContainmentItem					
+						node.representedElement = eObject
+						if (parent == root) {
+							containmentData.items += node
+						} else {
+							parent.children += node
+						}
+						if (eObject instanceof AbstractMethodDeclaration) {
+							node.size = if (eObject.body != null) eObject.body.cyclomaticComplexity else 1
+							return null
+						} else {
+							return node
+						}
 					} else {
-						parent.children += node
+						return parent
 					}
-					if (eObject instanceof AbstractMethodDeclaration) {
-						node.size = if (eObject.body != null) eObject.body.cyclomaticComplexity else 1
-						return null
-					} else {
-						return node
-					}					
 				]						
 				DataSetSerialization.write(new File(outputDirectory.path + "/" + pkg.qualifiedName.replace("\\.","/") + "/containment.json"), containmentData)
 				EcoreUtil.delete(containmentData)

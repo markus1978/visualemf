@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getRepresentedElement <em>Represented Element</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getName <em>Name</em>}</li>
  *   <li>{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getId <em>Id</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getType <em>Type</em>}</li>
+ *   <li>{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#isDeclaration <em>Declaration</em>}</li>
  * </ul>
  *
  * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getMoDiscoDataItem()
@@ -102,5 +104,57 @@ public interface MoDiscoDataItem extends DataItem {
 	 * @generated
 	 */
 	boolean isSetId();
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see #isSetType()
+	 * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getMoDiscoDataItem_Type()
+	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	String getType();
+
+	/**
+	 * Returns whether the value of the '{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getType <em>Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Type</em>' attribute is set.
+	 * @see #getType()
+	 * @generated
+	 */
+	boolean isSetType();
+
+	/**
+	 * Returns the value of the '<em><b>Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Declaration</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Declaration</em>' attribute.
+	 * @see #setDeclaration(boolean)
+	 * @see de.hub.visualemf.modiscodata.ModiscoDataPackage#getMoDiscoDataItem_Declaration()
+	 * @model
+	 * @generated
+	 */
+	boolean isDeclaration();
+
+	/**
+	 * Sets the value of the '{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#isDeclaration <em>Declaration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Declaration</em>' attribute.
+	 * @see #isDeclaration()
+	 * @generated
+	 */
+	void setDeclaration(boolean value);
 
 } // MoDiscoDataItem

@@ -113,13 +113,22 @@ public interface DataPackage extends EPackage {
 	int DATA_SET__ID_ATTRIBUTE = DATA_ITEM_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Type Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SET__TYPE_ATTRIBUTE = DATA_ITEM_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SET__NAME = DATA_ITEM_FEATURE_COUNT + 2;
+	int DATA_SET__NAME = DATA_ITEM_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -128,7 +137,7 @@ public interface DataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SET__ITEMS = DATA_ITEM_FEATURE_COUNT + 3;
+	int DATA_SET__ITEMS = DATA_ITEM_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Set</em>' class.
@@ -137,7 +146,7 @@ public interface DataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SET_FEATURE_COUNT = DATA_ITEM_FEATURE_COUNT + 4;
+	int DATA_SET_FEATURE_COUNT = DATA_ITEM_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Set</em>' class.
@@ -175,6 +184,15 @@ public interface DataPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TABLE__ID_ATTRIBUTE = DATA_SET__ID_ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Type Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TABLE__TYPE_ATTRIBUTE = DATA_SET__TYPE_ATTRIBUTE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -250,6 +268,15 @@ public interface DataPackage extends EPackage {
 	int DATA_HIERARCHY__ID_ATTRIBUTE = DATA_SET__ID_ATTRIBUTE;
 
 	/**
+	 * The feature id for the '<em><b>Type Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_HIERARCHY__TYPE_ATTRIBUTE = DATA_SET__TYPE_ATTRIBUTE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -323,6 +350,15 @@ public interface DataPackage extends EPackage {
 	int DATA_RELATION__ID_ATTRIBUTE = DATA_SET__ID_ATTRIBUTE;
 
 	/**
+	 * The feature id for the '<em><b>Type Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_RELATION__TYPE_ATTRIBUTE = DATA_SET__TYPE_ATTRIBUTE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -394,6 +430,15 @@ public interface DataPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIZE_TREE_MAP_DATA__ID_ATTRIBUTE = DATA_HIERARCHY__ID_ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Type Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_TREE_MAP_DATA__TYPE_ATTRIBUTE = DATA_HIERARCHY__TYPE_ATTRIBUTE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -491,6 +536,17 @@ public interface DataPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDataSet_IdAttribute();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.hub.visualemf.data.DataSet#getTypeAttribute <em>Type Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type Attribute</em>'.
+	 * @see de.hub.visualemf.data.DataSet#getTypeAttribute()
+	 * @see #getDataSet()
+	 * @generated
+	 */
+	EReference getDataSet_TypeAttribute();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.hub.visualemf.data.DataSet#getName <em>Name</em>}'.
@@ -656,6 +712,14 @@ public interface DataPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DATA_SET__ID_ATTRIBUTE = eINSTANCE.getDataSet_IdAttribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Attribute</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SET__TYPE_ATTRIBUTE = eINSTANCE.getDataSet_TypeAttribute();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

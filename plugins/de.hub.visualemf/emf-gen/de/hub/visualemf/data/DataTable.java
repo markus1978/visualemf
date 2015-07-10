@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.data.DataTable#getColumnFeatures <em>Column Features</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.hub.visualemf.data.DataPackage#getDataTable()
  * @model

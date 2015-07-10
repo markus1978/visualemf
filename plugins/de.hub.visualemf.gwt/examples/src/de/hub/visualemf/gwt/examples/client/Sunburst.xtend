@@ -8,6 +8,7 @@ import de.itemis.xtend.auto.gwt.CssResource
 import de.itemis.xtend.auto.gwt.JsNative
 import com.google.gwt.core.client.JsonUtils
 import com.google.gwt.core.client.JsArray
+import de.hub.visualemf.gwt.examples.client.Selection.SelectionItem
 
 @CssResource(value="SunburstStyles", csses="de/hub/visualemf/gwt/examples/client/SunburstStyles.css")
 @ClientBundle
@@ -26,6 +27,8 @@ class Sunburst extends FlowPanel {
 	
 	var com.github.gwtd3.api.core.Selection svg = null
 	
+	var String currentPackage = null
+	
 	
 	@JsNative private def JavaScriptObject update(com.github.gwtd3.api.core.Selection svg, JavaScriptObject data, String css) '''
 		var d3 = $wnd.d3;
@@ -33,7 +36,7 @@ class Sunburst extends FlowPanel {
 		height = this.@de.hub.visualemf.gwt.examples.client.Sunburst::height;
 		
 		var radius = Math.min(width, height) / 2,
-		color = d3.scale.category20c();
+		color = d3.scale.category10();
 		
 		var stash = function(d) {
 		    d.x0 = d.x;
@@ -57,7 +60,7 @@ class Sunburst extends FlowPanel {
 		    .sort(null)
 		    .size([2 * Math.PI, radius * radius])
 		    .value(function(d) {
-		        return 1;
+		        return d.size ? d.size : 1;
 		});
 		
 		var arc = d3.svg.arc()
@@ -83,7 +86,7 @@ class Sunburst extends FlowPanel {
 		    .attr("d", arc)
 		    .style("stroke", "#fff")
 		    .style("fill", function(d) {
-		        return color((d.children ? d : d.parent).name);
+		        return color(d.type);
 		    })
 		    .style("fill-rule", "evenodd")
 		    .each(stash);
@@ -103,6 +106,19 @@ class Sunburst extends FlowPanel {
 		});
 	'''
 	
+	@JsNative private def int updateSelection(com.github.gwtd3.api.core.Selection svg, boolean hasSelection) '''
+		var self = this
+		if (hasSelection) {
+			svg.selectAll("path").style("opacity", 0.3);
+
+			svg.selectAll("path").filter(function(node) {
+				return self.@de.hub.visualemf.gwt.examples.client.Sunburst::isSelected(Ljava/lang/String;)(node.id);
+			}).style("opacity", 1);
+		} else {
+			svg.selectAll("path").style("opacity", 1);
+		}
+	'''
+	
 	override def onLoad() {
 		svg = D3.select(this.element).append("svg")
 			.attr("class", css.chart)
@@ -114,17 +130,29 @@ class Sunburst extends FlowPanel {
 		selection.addListener(this)[items|
 	    	if (!items.empty) {
 	    		val item = items.findFirst[true]
-	    		DataHelper::load(item.pkg + "/containment.json")[result|
-	    			if (result != null) {
-		    			val data = JsonUtils.<TableData>safeEval(result)
-		    			update(data)		    			
-		    		}
-		    		return null
-	    		]	    		
+	    		if (item.pkg != currentPackage) {
+		    		DataHelper::load(item.pkg + "/containment.json")[result|
+		    			if (result != null) {
+			    			val data = JsonUtils.<TableData>safeEval(result)
+			    			update(data)
+			    			currentPackage = item.pkg		    			
+			    		}
+			    		return null
+		    		]		    		
+		    	} else {
+		    		updateSelection(svg, true)		
+		    	}	    		
+	    	} else {
+	    		updateSelection(svg, false)	    	
 	    	}
 	    	return null
 	    ]
 	} 
+	
+	private def boolean isSelected(String id) {
+		val result = selection.current.contains(new SelectionItem(id.substring(0, id.lastIndexOf("/")), id, null))
+		return result
+	}
 	
 	def update(JavaScriptObject data) {		
 		svg.selectAll("path").remove()

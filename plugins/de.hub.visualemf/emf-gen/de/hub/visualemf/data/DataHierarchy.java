@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EReference;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.data.DataHierarchy#getChildrenReference <em>Children Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.hub.visualemf.data.DataPackage#getDataHierarchy()
  * @model

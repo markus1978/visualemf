@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EAttribute;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.data.SizeTreeMapData#getSizeAttribute <em>Size Attribute</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.hub.visualemf.data.DataPackage#getSizeTreeMapData()
  * @model

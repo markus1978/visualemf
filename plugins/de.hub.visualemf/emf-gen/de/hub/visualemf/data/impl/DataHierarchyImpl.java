@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.hub.visualemf.data.impl.DataHierarchyImpl#getChildrenReference <em>Children Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

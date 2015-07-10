@@ -52,6 +52,12 @@ class Selection {
 		}
 	}
 	
+	def remove(Object source, SelectionItem id) {
+		if (ids.remove(id)) {
+			source.notifyChange			
+		}
+	}
+	
 	def addAll(Object source, Iterable<SelectionItem> ids) {
 		var changed = false
 		for (id:ids) {

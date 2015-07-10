@@ -20,6 +20,7 @@ class DataSetSerialization {
 					{
 						"name" : "«dataItem.eGet(dataSet.nameAttribute)»",
 						"id" : "«dataItem.eGet(dataSet.idAttribute)»",
+						"type" : "«dataItem.eGet(dataSet.typeAttribute)»",
 						"values" : [«FOR column:dataSet.columnFeatures SEPARATOR ", "»«dataItem.eGet(column)»«ENDFOR»]
 					}
 				«ENDFOR»
@@ -33,6 +34,7 @@ class DataSetSerialization {
 				{
 					"name" : "«dataItem.eGet(dataSet.nameAttribute)»",
 					"id" : "«dataItem.eGet(dataSet.idAttribute)»",
+					"type" : "«dataItem.eGet(dataSet.typeAttribute)»",
 					"links" : [«FOR relatedItem:(dataItem.eGet(dataSet.relationReference) as EList<? extends DataItem>) SEPARATOR ", "»"«relatedItem.eGet(dataSet.idAttribute)»"«ENDFOR»]
 				}
 			«ENDFOR»
@@ -49,6 +51,7 @@ class DataSetSerialization {
 				{
 					«val name = dataItem.eGet(dataSet.nameAttribute)»
 					«val children=dataItem.eGet(dataSet.childrenReference) as EList<? extends DataItem>»
+					"type" : "«dataItem.eGet(dataSet.typeAttribute)»",
 					"id" : "«dataItem.eGet(dataSet.idAttribute)»"«IF !name.equals("#noname") || !children.empty || dataSet instanceof SizeTreeMapData»,«ENDIF»
 					«IF !name.equals("#noname")»
 						"name" : "«dataItem.eGet(dataSet.nameAttribute)»"«IF !children.empty || dataSet instanceof SizeTreeMapData»,«ENDIF»

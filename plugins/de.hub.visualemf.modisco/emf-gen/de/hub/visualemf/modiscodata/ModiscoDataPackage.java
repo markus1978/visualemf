@@ -96,13 +96,31 @@ public interface ModiscoDataPackage extends EPackage {
 	int MO_DISCO_DATA_ITEM__ID = DataPackage.DATA_ITEM_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MO_DISCO_DATA_ITEM__TYPE = DataPackage.DATA_ITEM_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MO_DISCO_DATA_ITEM__DECLARATION = DataPackage.DATA_ITEM_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Mo Disco Data Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MO_DISCO_DATA_ITEM_FEATURE_COUNT = DataPackage.DATA_ITEM_FEATURE_COUNT + 3;
+	int MO_DISCO_DATA_ITEM_FEATURE_COUNT = DataPackage.DATA_ITEM_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Mo Disco Data Item</em>' class.
@@ -149,6 +167,24 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS_METRICS_ITEM__ID = MO_DISCO_DATA_ITEM__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_METRICS_ITEM__TYPE = MO_DISCO_DATA_ITEM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_METRICS_ITEM__DECLARATION = MO_DISCO_DATA_ITEM__DECLARATION;
 
 	/**
 	 * The feature id for the '<em><b>Wmc</b></em>' attribute.
@@ -278,6 +314,24 @@ public interface ModiscoDataPackage extends EPackage {
 	int CONTAINMENT_ITEM__ID = MO_DISCO_DATA_ITEM__ID;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINMENT_ITEM__TYPE = MO_DISCO_DATA_ITEM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINMENT_ITEM__DECLARATION = MO_DISCO_DATA_ITEM__DECLARATION;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -351,6 +405,24 @@ public interface ModiscoDataPackage extends EPackage {
 	int PACKAGE_DEPENDENCY_ITEM__ID = MO_DISCO_DATA_ITEM__ID;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DEPENDENCY_ITEM__TYPE = MO_DISCO_DATA_ITEM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DEPENDENCY_ITEM__DECLARATION = MO_DISCO_DATA_ITEM__DECLARATION;
+
+	/**
 	 * The feature id for the '<em><b>Dependencies</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -413,6 +485,24 @@ public interface ModiscoDataPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS_DEPENDENCY_ITEM__ID = MO_DISCO_DATA_ITEM__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_DEPENDENCY_ITEM__TYPE = MO_DISCO_DATA_ITEM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_DEPENDENCY_ITEM__DECLARATION = MO_DISCO_DATA_ITEM__DECLARATION;
 
 	/**
 	 * The feature id for the '<em><b>Dependencies</b></em>' containment reference list.
@@ -658,6 +748,28 @@ public interface ModiscoDataPackage extends EPackage {
 	EAttribute getMoDiscoDataItem_Id();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see de.hub.visualemf.modiscodata.MoDiscoDataItem#getType()
+	 * @see #getMoDiscoDataItem()
+	 * @generated
+	 */
+	EAttribute getMoDiscoDataItem_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.hub.visualemf.modiscodata.MoDiscoDataItem#isDeclaration <em>Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Declaration</em>'.
+	 * @see de.hub.visualemf.modiscodata.MoDiscoDataItem#isDeclaration()
+	 * @see #getMoDiscoDataItem()
+	 * @generated
+	 */
+	EAttribute getMoDiscoDataItem_Declaration();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -849,6 +961,22 @@ public interface ModiscoDataPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MO_DISCO_DATA_ITEM__ID = eINSTANCE.getMoDiscoDataItem_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MO_DISCO_DATA_ITEM__TYPE = eINSTANCE.getMoDiscoDataItem_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Declaration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MO_DISCO_DATA_ITEM__DECLARATION = eINSTANCE.getMoDiscoDataItem_Declaration();
 
 	}
 
