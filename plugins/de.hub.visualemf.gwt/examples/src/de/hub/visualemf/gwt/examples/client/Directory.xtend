@@ -69,7 +69,7 @@ class Directory extends FlowPanel {
 		tree.setAnimationEnabled(true);
 		tree.ensureDebugId("cwTree-staticTree");
 		val staticTreeWrapper = new ScrollPanel(tree);
-		staticTreeWrapper.setSize("230px", "800px");
+		staticTreeWrapper.setSize("230px", "657px");
 
 		val staticDecorator = new DecoratorPanel();
 		staticDecorator.setWidget(staticTreeWrapper);

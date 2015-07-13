@@ -51,7 +51,7 @@ class ParallelCoordinates extends AbstractPackageVis<TableData> {
 	val selection = GlobalSelection::instance
 	
 	val margin = 10
-	val width = 750
+	val width = 1100
 	val height = 300	
 	
 	val css = ParallelCoordinatesBundle.Util.get.ParallelCoordinatesStyles;

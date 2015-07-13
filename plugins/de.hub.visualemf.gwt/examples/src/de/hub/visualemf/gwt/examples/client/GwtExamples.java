@@ -5,9 +5,11 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.user.client.ui.DecoratorPanel;
 import com.google.gwt.user.client.ui.DockLayoutPanel;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.StackLayoutPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class GwtExamples implements EntryPoint {
@@ -20,6 +22,7 @@ public class GwtExamples implements EntryPoint {
 		Sunburst sunburst = new Sunburst();
 		HierachicalEdgeBundling heb = new HierachicalEdgeBundling();
 		SelectionVis selection = new SelectionVis();
+		ChordDiagram chord = new ChordDiagram();
 		
 		DockLayoutPanel p = new DockLayoutPanel(Unit.PX);
 		p.addNorth(selection, 110);
@@ -30,8 +33,9 @@ public class GwtExamples implements EntryPoint {
 		VerticalPanel content = new VerticalPanel();
 		content.add(parallelCoordinates);
 		
-		HorizontalPanel details = new HorizontalPanel();
+		HorizontalPanel details = new HorizontalPanel();	
 		details.add(heb);
+		details.add(chord);
 		details.add(sunburst);
 		
 		
@@ -44,7 +48,8 @@ public class GwtExamples implements EntryPoint {
 		RootLayoutPanel.get().add(p);
 		RootLayoutPanel.get().setStylePrimaryName("root-panel");
 		
-		GlobalSelection.instance.add(this, new GlobalSelection.SelectionItem("de/hub/emffrag/fragmentation", null, null));
+		//GlobalSelection.instance.add(this, new GlobalSelection.SelectionItem("de/hub/emffrag/fragmentation", null, null));
+		GlobalSelection.instance.add(this, new GlobalSelection.SelectionItem("org/eclipse/jdt/ui/wizards", null, null));
 	
 		
 //		ChordDiagram chordDiagram = new ChordDiagram();

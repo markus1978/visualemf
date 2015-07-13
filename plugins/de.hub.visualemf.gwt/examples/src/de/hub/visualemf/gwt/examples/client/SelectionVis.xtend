@@ -10,7 +10,7 @@ class SelectionVis extends FlowPanel {
 	override protected onLoad() {
 		val panel = new FlowPanel
 		val scollWrapper = new ScrollPanel(panel);
-		scollWrapper.setSize("1000px", "90px");
+		scollWrapper.setSize("1350px", "90px");
 		
 		val staticDecorator = new DecoratorPanel();
 		staticDecorator.setWidget(scollWrapper);
