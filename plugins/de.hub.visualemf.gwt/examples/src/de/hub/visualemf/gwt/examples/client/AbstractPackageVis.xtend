@@ -34,7 +34,8 @@ abstract class AbstractPackageVis<DataType extends JavaScriptObject> extends Abs
 	protected abstract def String getFileName();
 	
 	protected def boolean isSelected(String id) {
-		val result = selection.current.contains(new SelectionItem(id.substring(0, id.lastIndexOf(".")), id, null))
+		val result = selection.current.contains(new SelectionItem(id.substring(0, id.lastIndexOf(".")), id, null)) ||
+				id.startsWith(selection.current.findFirst[true].clazz)
 		return result
 	}
 	

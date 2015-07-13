@@ -9,7 +9,7 @@ import org.eclipse.xtext.xbase.lib.Functions.Function1
 
 class DataHelper {
 	
-	public static val prefix = "data/emffrag"
+	public static val prefix = "data/jdt"
 
 	static def load(String file, Function1<String, Void> onFinish) {
 		try {

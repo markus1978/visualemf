@@ -44,11 +44,19 @@ class ModiscoToData {
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new XMIResourceFactoryImpl);
 		
 		val instance = new ModiscoToData
-		instance.run(new File("../de.hub.visualemf.gwt/examples/war/data/emffrag"), new File("model/emffrag.xmi.zip"))		
+		if (args.length == 2) {
+				instance.run(new File(args.get(0)), new File(args.get(1)))
+		} else {
+			instance.run(new File("../de.hub.visualemf.gwt/examples/war/data/emffrag"), new File("model/emffrag.xmi.zip"))
+		}		
 	}
 	
 	private def isSelectPackage(Package pkg) {
 		pkg.ownedElements.exists[it.originalCompilationUnit != null && it instanceof AbstractTypeDeclaration]
+	}
+	
+	private def boolean isOrContainsSelectPackage(Package pkg) {
+		pkg.isSelectPackage || pkg.ownedPackages.exists[isOrContainsSelectPackage]
 	}
 	
 	def run(File outputDirectory, File modelFile) {		
@@ -73,6 +81,11 @@ class ModiscoToData {
 			val root = ModiscoDataFactory::eINSTANCE.createContainmentItem
 			model.eTraverse(root)[eObject,parent|
 				if (eObject instanceof Package || eObject instanceof AbstractTypeDeclaration) {
+					if (eObject instanceof Package) {
+						if (!eObject.isOrContainsSelectPackage) {
+							return null
+						}
+					}
 					val node = ModiscoDataFactory::eINSTANCE.createContainmentItem
 					node.representedElement = eObject
 					if (parent == root) {

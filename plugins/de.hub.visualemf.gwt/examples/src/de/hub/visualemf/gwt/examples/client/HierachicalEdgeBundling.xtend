@@ -1,24 +1,23 @@
 package de.hub.visualemf.gwt.examples.client
 
+import com.github.gwtd3.api.D3
+import com.github.gwtd3.api.core.Selection
 import com.google.gwt.core.client.JavaScriptObject
-import com.google.gwt.user.client.ui.FlowPanel
 import de.itemis.xtend.auto.gwt.ClientBundle
 import de.itemis.xtend.auto.gwt.CssResource
 import de.itemis.xtend.auto.gwt.JsNative
-import com.github.gwtd3.api.core.Selection
-import com.github.gwtd3.api.D3
-import de.hub.visualemf.gwt.examples.client.GlobalSelection.SelectionItem
+
 import static extension de.hub.visualemf.gwt.examples.client.GlobalSelection.*
 
-@CssResource(value="ChordDiagramStyles", csses="de/hub/visualemf/gwt/examples/client/ChordDiagramStyles.css")
+@CssResource(value="HierachicalEdgeBundlingStyles", csses="de/hub/visualemf/gwt/examples/client/HierachicalEdgeBundlingStyles.css")
 @ClientBundle
-public interface ChordDiagramBundle {
+public interface HierachicalEdgeBundlingBundle {
 	
 }
 
-class ChordDiagram extends AbstractPackageVis<JavaScriptObject> {
+class HierachicalEdgeBundling extends AbstractPackageVis<JavaScriptObject> {
 	
-	val css = ChordDiagramBundle.Util.get.ChordDiagramStyles;
+	val css = HierachicalEdgeBundlingBundle.Util.get.HierachicalEdgeBundlingStyles;
 	val width = 350
 	val height = 350
 	
@@ -27,8 +26,8 @@ class ChordDiagram extends AbstractPackageVis<JavaScriptObject> {
 	
 	@JsNative private def JavaScriptObject update(Selection div, Selection svg, JavaScriptObject data, String chart, String source, String target) '''
 		var d3 = $wnd.d3;
-		var w = this.@de.hub.visualemf.gwt.examples.client.ChordDiagram::width;
-		var h = this.@de.hub.visualemf.gwt.examples.client.ChordDiagram::height;
+		var w = this.@de.hub.visualemf.gwt.examples.client.HierachicalEdgeBundling::width;
+		var h = this.@de.hub.visualemf.gwt.examples.client.HierachicalEdgeBundling::height;
 		
 		var rx = w / 2,
 		    ry = h / 2,

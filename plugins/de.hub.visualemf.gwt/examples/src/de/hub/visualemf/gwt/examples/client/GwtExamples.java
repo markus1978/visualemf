@@ -18,7 +18,7 @@ public class GwtExamples implements EntryPoint {
 		Directory directory = new Directory();
 		ParallelCoordinates parallelCoordinates = new ParallelCoordinates();
 		Sunburst sunburst = new Sunburst();
-		ChordDiagram chord = new ChordDiagram();
+		HierachicalEdgeBundling heb = new HierachicalEdgeBundling();
 		SelectionVis selection = new SelectionVis();
 		
 		DockLayoutPanel p = new DockLayoutPanel(Unit.PX);
@@ -31,7 +31,7 @@ public class GwtExamples implements EntryPoint {
 		content.add(parallelCoordinates);
 		
 		HorizontalPanel details = new HorizontalPanel();
-		details.add(chord);
+		details.add(heb);
 		details.add(sunburst);
 		
 		
