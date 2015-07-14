@@ -59,6 +59,26 @@ class ModiscoToData {
 		pkg.isSelectPackage || pkg.ownedPackages.exists[isOrContainsSelectPackage]
 	}
 	
+	def generateMetricsData(Package pkg) {
+		val classes = pkg.ownedElements.typeSelect(typeof(AbstractTypeDeclaration)) 
+		val metricsMetaData = DataSetMetaDataGenerator.autoGenTableDataSet(ModiscoDataPackage.eINSTANCE.classMetricsItem)
+		classes.forEach[
+			val metricsDataItem = ModiscoDataFactory::eINSTANCE.createClassMetricsItem
+			metricsDataItem.representedElement = it
+			metricsDataItem.wmc = it.weightedMethodsPerClass
+			metricsDataItem.wmc_cc = it.weightedMethodPerClassWithCCWeight
+			metricsDataItem.dit = it.depthOfInheritenceTree
+			metricsDataItem.noc = it.numberOfChildren
+			metricsDataItem.cbo = it.couplingBetweenObjects
+			metricsDataItem.rfc = it.responseForClass
+			metricsDataItem.lcom = it.lackOfCohesionInMethods
+			metricsDataItem.size = it.eAllContentsAsIterable.sum[1]
+			
+			metricsMetaData.items.add(metricsDataItem)
+		]
+		return metricsMetaData
+	}
+	
 	def run(File outputDirectory, File modelFile) {		
 		if (outputDirectory.exists) {
 			FileUtils.deleteDirectory(outputDirectory)
@@ -112,23 +132,10 @@ class ModiscoToData {
 			executorService.submit[
 				println("+ processing " + pkg.qualifiedName)
 				val classes = pkg.ownedElements.typeSelect(typeof(AbstractTypeDeclaration)) 
-				// metrics data
-				val metricsData = DataSetMetaDataGenerator.autoGenTableDataSet(ModiscoDataPackage.eINSTANCE.classMetricsItem)
-				classes.forEach[
-					val metricsDataItem = ModiscoDataFactory::eINSTANCE.createClassMetricsItem
-					metricsDataItem.representedElement = it
-					metricsDataItem.wmc = it.weightedMethodsPerClass
-					metricsDataItem.wmc_cc = it.weightedMethodsPerClass[it.cyclomaticComplexity]
-					metricsDataItem.dit = it.depthOfInheritenceTree
-					metricsDataItem.noc = it.numberOfChildren
-					metricsDataItem.cbo = it.couplingBetweenObjects
-					metricsDataItem.rfc = it.responseForClass
-					metricsDataItem.lcom = it.lackOfCohesionInMethods
-					metricsDataItem.size = it.eAllContentsAsIterable.sum[1]
-					metricsData.items.add(metricsDataItem)
-				]
-				DataSetSerialization.write(new File(outputDirectory.path + "/" + pkg.qualifiedName.replace("\\.","/") + "/metrics.json"), metricsData)
-				EcoreUtil.delete(metricsData)
+				
+				val metricsMetaData = pkg.generateMetricsData
+				DataSetSerialization.write(new File(outputDirectory.path + "/" + pkg.qualifiedName.replace("\\.","/") + "/metrics.json"), metricsMetaData)
+				EcoreUtil.delete(metricsMetaData)
 				
 				// dependency data
 				val dependencyData = DataSetMetaDataGenerator.autoGenRelationDataSet(ModiscoDataPackage::eINSTANCE.classDependencyItem)
